@@ -1,0 +1,1144 @@
+{
+  "candidates": {
+    "text_inputs": [
+      {
+        "ariaLabel": "",
+        "class": "search-input",
+        "css": "input[placeholder*=\"搜索小红书\"]",
+        "depth": 6,
+        "id": null,
+        "placeholder": "搜索小红书",
+        "tag": "INPUT",
+        "textLength": 0,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "search-input",
+        "css": "#search-input[placeholder*=\"搜索小红书\"]",
+        "depth": 6,
+        "id": "search-input",
+        "placeholder": "搜索小红书",
+        "tag": "INPUT",
+        "textLength": 0,
+        "visible": true
+      }
+    ],
+    "buttons": [
+      {
+        "ariaLabel": "",
+        "class": "reds-button-new min-width-search-icon large primary has-icon pure-icon min-width-search-icon",
+        "css": "button",
+        "depth": 5,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "",
+        "title": "",
+        "type": null,
+        "visible": false
+      },
+      {
+        "ariaLabel": "",
+        "class": "reds-button-new channel-btn large text channel-btn",
+        "css": "button",
+        "depth": 9,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "创作中心",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "reds-button-new channel-btn large text channel-btn",
+        "css": "button",
+        "depth": 9,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "业务合作",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "reds-button-new large primary has-icon pure-icon",
+        "css": "button",
+        "depth": 9,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "",
+        "title": "",
+        "type": null,
+        "visible": false
+      },
+      {
+        "ariaLabel": "",
+        "class": "tab active",
+        "css": "button",
+        "depth": 12,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "综合",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "tab",
+        "css": "button",
+        "depth": 12,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "中文意思",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "tab",
+        "css": "button",
+        "depth": 12,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "天津",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "tab",
+        "css": "button",
+        "depth": 12,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "上海",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "tab",
+        "css": "button",
+        "depth": 12,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "发音",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "tab",
+        "css": "button",
+        "depth": 12,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "网课",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "tab",
+        "css": "button",
+        "depth": 12,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "测评",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "tab",
+        "css": "button",
+        "depth": 12,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "软件",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "tab",
+        "css": "button",
+        "depth": 12,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "模特",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "tab",
+        "css": "button",
+        "depth": 12,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "拍摄",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "tab",
+        "css": "button",
+        "depth": 12,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "英国",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "tab",
+        "css": "button",
+        "depth": 12,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "电脑",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "tab",
+        "css": "button",
+        "depth": 12,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "期刊",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "tab",
+        "css": "button",
+        "depth": 12,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "翻译",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "tab",
+        "css": "button",
+        "depth": 12,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "作战服",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "tab",
+        "css": "button",
+        "depth": 12,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "自然拼读",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "reds-button-new reds-alert-footer__left small text reds-alert-footer__left",
+        "css": "button",
+        "depth": 5,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "我要申诉",
+        "title": "",
+        "type": null,
+        "visible": false
+      },
+      {
+        "ariaLabel": "",
+        "class": "reds-button-new reds-alert-footer__right rounded medium primary reds-alert-footer__right rounded",
+        "css": "button",
+        "depth": 5,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "我知道了",
+        "title": "",
+        "type": null,
+        "visible": false
+      },
+      {
+        "ariaLabel": "",
+        "class": "reds-button-new reds-alert-footer__right block rounded medium primary reds-alert-footer__right block",
+        "css": "button",
+        "depth": 5,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "我知道了",
+        "title": "",
+        "type": null,
+        "visible": false
+      },
+      {
+        "ariaLabel": "",
+        "class": "reds-button-new large icon has-icon pure-icon",
+        "css": "button",
+        "depth": 5,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "",
+        "title": "",
+        "type": null,
+        "visible": false
+      },
+      {
+        "ariaLabel": "",
+        "class": "reds-button-new large icon has-icon pure-icon",
+        "css": "button",
+        "depth": 5,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "",
+        "title": "",
+        "type": null,
+        "visible": false
+      },
+      {
+        "ariaLabel": "",
+        "class": "reds-button-new dragger large icon has-icon pure-icon dragger",
+        "css": "button",
+        "depth": 6,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "reds-button-new share-icon large icon has-icon pure-icon share-icon",
+        "css": "button",
+        "depth": 6,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "",
+        "title": "",
+        "type": null,
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "reds-button-new close-icon large icon has-icon pure-icon close-icon",
+        "css": "button",
+        "depth": 5,
+        "disabled": false,
+        "id": null,
+        "tag": "BUTTON",
+        "text": "",
+        "title": "",
+        "type": null,
+        "visible": true
+      }
+    ],
+    "scroll_containers": [
+      {
+        "childCount": 2,
+        "class": "side-bar",
+        "clientHeight": 637,
+        "scrollHeight": 967,
+        "selector": "[class*=\"side-bar\"]",
+        "tag": "DIV"
+      }
+    ],
+    "message_blocks": [],
+    "links": [
+      {
+        "depth": 11,
+        "href": "/explore/6a1ab19900000000350267f6",
+        "id": "6a1ab19900000000350267f6",
+        "text": "",
+        "visible": false
+      },
+      {
+        "depth": 11,
+        "href": "/search_result/6a1ab19900000000350267f6?xsec_token=ABQW2WlbXFA5jAsRCluZxfV0cqj9z5U75c7c4x5Dsmkk8=&xsec_source=",
+        "id": "6a1ab19900000000350267f6",
+        "text": "",
+        "visible": true
+      },
+      {
+        "depth": 12,
+        "href": "/search_result/6a1ab19900000000350267f6?xsec_token=ABQW2WlbXFA5jAsRCluZxfV0cqj9z5U75c7c4x5Dsmkk8=&xsec_source=",
+        "id": "6a1ab19900000000350267f6",
+        "text": "Playtest已开放下载！",
+        "visible": true
+      },
+      {
+        "depth": 11,
+        "href": "/explore/6a1aaafb0000000008003232",
+        "id": "6a1aaafb0000000008003232",
+        "text": "",
+        "visible": false
+      },
+      {
+        "depth": 11,
+        "href": "/search_result/6a1aaafb0000000008003232?xsec_token=ABQW2WlbXFA5jAsRCluZxfV2s3NwCF7G0slw5kcgKmX38=&xsec_source=",
+        "id": "6a1aaafb0000000008003232",
+        "text": "",
+        "visible": true
+      },
+      {
+        "depth": 12,
+        "href": "/search_result/6a1aaafb0000000008003232?xsec_token=ABQW2WlbXFA5jAsRCluZxfV2s3NwCF7G0slw5kcgKmX38=&xsec_source=",
+        "id": "6a1aaafb0000000008003232",
+        "text": "雅思阅读正确率越做越低",
+        "visible": true
+      },
+      {
+        "depth": 11,
+        "href": "/explore/6a190dde000000001002d000",
+        "id": "6a190dde000000001002d000",
+        "text": "",
+        "visible": false
+      },
+      {
+        "depth": 11,
+        "href": "/search_result/6a190dde000000001002d000?xsec_token=ABQKe-uH1AgHwNhDrb-fGVUie2XRigzwTAwyykm6BBIK0=&xsec_source=",
+        "id": "6a190dde000000001002d000",
+        "text": "",
+        "visible": true
+      },
+      {
+        "depth": 12,
+        "href": "/search_result/6a190dde000000001002d000?xsec_token=ABQKe-uH1AgHwNhDrb-fGVUie2XRigzwTAwyykm6BBIK0=&xsec_source=",
+        "id": "6a190dde000000001002d000",
+        "text": "Test your mental math skills",
+        "visible": true
+      },
+      {
+        "depth": 11,
+        "href": "/explore/6a1aa0ff0000000008003901",
+        "id": "6a1aa0ff0000000008003901",
+        "text": "",
+        "visible": false
+      },
+      {
+        "depth": 11,
+        "href": "/search_result/6a1aa0ff0000000008003901?xsec_token=ABQW2WlbXFA5jAsRCluZxfVzZRCEJtMK2P3aZukb5wvwc=&xsec_source=",
+        "id": "6a1aa0ff0000000008003901",
+        "text": "",
+        "visible": true
+      },
+      {
+        "depth": 12,
+        "href": "/search_result/6a1aa0ff0000000008003901?xsec_token=ABQW2WlbXFA5jAsRCluZxfVzZRCEJtMK2P3aZukb5wvwc=&xsec_source=",
+        "id": "6a1aa0ff0000000008003901",
+        "text": "IP test！",
+        "visible": true
+      },
+      {
+        "depth": 11,
+        "href": "/explore/6a1a93f10000000013020401",
+        "id": "6a1a93f10000000013020401",
+        "text": "",
+        "visible": false
+      },
+      {
+        "depth": 11,
+        "href": "/search_result/6a1a93f10000000013020401?xsec_token=ABQW2WlbXFA5jAsRCluZxfVxbvbbeF9LfqtT1qAp7J3F4=&xsec_source=",
+        "id": "6a1a93f10000000013020401",
+        "text": "",
+        "visible": true
+      },
+      {
+        "depth": 12,
+        "href": "/search_result/6a1a93f10000000013020401?xsec_token=ABQW2WlbXFA5jAsRCluZxfVxbvbbeF9LfqtT1qAp7J3F4=&xsec_source=",
+        "id": "6a1a93f10000000013020401",
+        "text": "First test day  测试第一天",
+        "visible": true
+      },
+      {
+        "depth": 11,
+        "href": "/explore/6a1a38bf00000000360036e6",
+        "id": "6a1a38bf00000000360036e6",
+        "text": "",
+        "visible": false
+      },
+      {
+        "depth": 11,
+        "href": "/search_result/6a1a38bf00000000360036e6?xsec_token=ABQW2WlbXFA5jAsRCluZxfV_BY3mUh1lFdQbHBi_crP10=&xsec_source=",
+        "id": "6a1a38bf00000000360036e6",
+        "text": "",
+        "visible": true
+      },
+      {
+        "depth": 12,
+        "href": "/search_result/6a1a38bf00000000360036e6?xsec_token=ABQW2WlbXFA5jAsRCluZxfV_BY3mUh1lFdQbHBi_crP10=&xsec_source=",
+        "id": "6a1a38bf00000000360036e6",
+        "text": "https://www.arealme.com/phobia-test/cn/",
+        "visible": true
+      },
+      {
+        "depth": 11,
+        "href": "/explore/6a1ab3500000000038022aaf",
+        "id": "6a1ab3500000000038022aaf",
+        "text": "",
+        "visible": false
+      },
+      {
+        "depth": 11,
+        "href": "/search_result/6a1ab3500000000038022aaf?xsec_token=ABQW2WlbXFA5jAsRCluZxfV8syWKpaPCFuKBFqkd_6j_Q=&xsec_source=",
+        "id": "6a1ab3500000000038022aaf",
+        "text": "",
+        "visible": true
+      }
+    ]
+  },
+  "health": {
+    "role_checks": {
+      "author_profile_link": {
+        "broken": [],
+        "status": "ok",
+        "working": [
+          {
+            "count": 20,
+            "css": "a.author"
+          },
+          {
+            "count": 24,
+            "css": "a[href*=\"/user/profile/\"]"
+          }
+        ]
+      },
+      "login_wall": {
+        "broken": [],
+        "status": "ok",
+        "working": [
+          {
+            "count": 1,
+            "css": "body"
+          }
+        ]
+      },
+      "note_author": {
+        "broken": [],
+        "status": "ok",
+        "working": [
+          {
+            "count": 20,
+            "css": "a.author .name"
+          },
+          {
+            "count": 20,
+            "css": ".name"
+          }
+        ]
+      },
+      "note_likes": {
+        "broken": [],
+        "status": "ok",
+        "working": [
+          {
+            "count": 22,
+            "css": ".count"
+          },
+          {
+            "count": 20,
+            "css": ".like-wrapper .count"
+          }
+        ]
+      },
+      "note_link": {
+        "broken": [],
+        "status": "ok",
+        "working": [
+          {
+            "count": 20,
+            "css": "a.cover.mask"
+          },
+          {
+            "count": 39,
+            "css": "a[href*=\"/search_result/\"]"
+          },
+          {
+            "count": 20,
+            "css": "a[href*=\"/explore/\"]"
+          }
+        ]
+      },
+      "note_title": {
+        "broken": [],
+        "status": "ok",
+        "working": [
+          {
+            "count": 22,
+            "css": ".title"
+          },
+          {
+            "count": 19,
+            "css": ".footer .title span"
+          }
+        ]
+      },
+      "publish_button": {
+        "broken": [
+          {
+            "count": 0,
+            "css": "xhs-publish-btn"
+          }
+        ],
+        "status": "broken",
+        "working": []
+      },
+      "publish_title_input": {
+        "broken": [
+          {
+            "count": 0,
+            "css": "[contenteditable=\"true\"][placeholder*=\"标题\"]"
+          },
+          {
+            "count": 0,
+            "css": "input[maxlength=\"20\"]"
+          },
+          {
+            "count": 0,
+            "css": "input[placeholder*=\"标题\"]"
+          },
+          {
+            "count": 0,
+            "css": "input[class*=\"title\"]"
+          }
+        ],
+        "status": "broken",
+        "working": []
+      },
+      "search_result_item": {
+        "broken": [],
+        "status": "ok",
+        "working": [
+          {
+            "count": 22,
+            "css": "section.note-item"
+          },
+          {
+            "count": 20,
+            "css": "section:has(a[href*=\"/search_result/\"])"
+          },
+          {
+            "count": 20,
+            "css": "section:has(a[href*=\"/explore/\"])"
+          }
+        ]
+      }
+    }
+  },
+  "layout": {
+    "mainContainers": [
+      {
+        "childCount": 2,
+        "class": "layout limit",
+        "id": "global",
+        "role": null,
+        "tag": "DIV",
+        "visible": true
+      },
+      {
+        "childCount": 1,
+        "class": "header-container",
+        "id": null,
+        "role": null,
+        "tag": "DIV",
+        "visible": false
+      },
+      {
+        "childCount": 3,
+        "class": "main-container",
+        "id": null,
+        "role": null,
+        "tag": "DIV",
+        "visible": true
+      },
+      {
+        "childCount": 2,
+        "class": "link-wrapper",
+        "id": null,
+        "role": null,
+        "tag": "A",
+        "visible": true
+      },
+      {
+        "childCount": 1,
+        "class": "",
+        "id": null,
+        "role": null,
+        "tag": "svg",
+        "visible": true
+      },
+      {
+        "childCount": 2,
+        "class": "link-wrapper",
+        "id": null,
+        "role": null,
+        "tag": "A",
+        "visible": true
+      },
+      {
+        "childCount": 1,
+        "class": "",
+        "id": null,
+        "role": null,
+        "tag": "svg",
+        "visible": true
+      },
+      {
+        "childCount": 2,
+        "class": "link-wrapper",
+        "id": null,
+        "role": null,
+        "tag": "A",
+        "visible": true
+      },
+      {
+        "childCount": 1,
+        "class": "",
+        "id": null,
+        "role": null,
+        "tag": "svg",
+        "visible": true
+      },
+      {
+        "childCount": 2,
+        "class": "link-wrapper",
+        "id": null,
+        "role": null,
+        "tag": "A",
+        "visible": true
+      }
+    ],
+    "scrollableContainers": [
+      {
+        "childCount": 2,
+        "class": "side-bar",
+        "clientHeight": 637,
+        "scrollHeight": 967,
+        "selector": "[class*=\"side-bar\"]",
+        "tag": "DIV"
+      }
+    ]
+  },
+  "selectors": {
+    "class_prefixes": {
+      "about-us": 1,
+      "active": 2,
+      "ad-wrap": 1,
+      "anchor": 1,
+      "animate": 1,
+      "app-info": 2,
+      "author": 20,
+      "author-a": 20,
+      "automa-e": 1,
+      "back-top": 1,
+      "badge-co": 2,
+      "block": 2,
+      "bottom-c": 16,
+      "bottom-m": 3,
+      "btn-next": 1,
+      "btn-wrap": 1,
+      "card-bot": 20,
+      "channel": 15,
+      "channel-": 8,
+      "close-ic": 4,
+      "containe": 1,
+      "content-": 2,
+      "corp-inf": 2,
+      "count": 22,
+      "cover": 20,
+      "divider": 2,
+      "dragger": 2,
+      "dropdown": 5,
+      "feeds-co": 1,
+      "feeds-lo": 1,
+      "feeds-pa": 1,
+      "filter": 1,
+      "floating": 1,
+      "footer": 20,
+      "fullscre": 1,
+      "gray": 2,
+      "has-icon": 7,
+      "header": 2,
+      "header-c": 1,
+      "header-l": 1,
+      "icon": 6,
+      "icon-war": 2,
+      "icon-wra": 1,
+      "icp-info": 2,
+      "icp-text": 24,
+      "informat": 3,
+      "input-bo": 1,
+      "input-bu": 1,
+      "item-tex": 8,
+      "item-wra": 8,
+      "large": 9,
+      "layout": 1,
+      "ld": 20,
+      "left": 2,
+      "like-act": 20,
+      "like-lot": 20,
+      "like-wra": 20,
+      "limit": 1,
+      "link": 8,
+      "link-wra": 12,
+      "main-con": 2,
+      "mask": 20,
+      "mask-pap": 1,
+      "medium": 2,
+      "menu": 1,
+      "menu-ico": 2,
+      "min-widt": 2,
+      "name": 20,
+      "name-tim": 20,
+      "note-ite": 22,
+      "out": 1,
+      "outside": 1,
+      "padding-": 1,
+      "panel-he": 1,
+      "play-ico": 8,
+      "primary": 4,
+      "pure-ico": 7,
+      "query-no": 16,
+      "rec-quer": 8,
+      "reds-ale": 20,
+      "reds-ava": 4,
+      "reds-but": 29,
+      "reds-ima": 2,
+      "reds-img": 8,
+      "reds-sti": 2,
+      "responsi": 2,
+      "right": 5,
+      "right-ic": 8,
+      "rounded": 4,
+      "scroll-c": 2,
+      "search-i": 4,
+      "search-l": 4,
+      "share-ic": 2,
+      "side-bar": 3,
+      "size-s": 2,
+      "slot-con": 2,
+      "small": 1,
+      "tab": 16,
+      "tab-scro": 1,
+      "tag-sear": 1,
+      "text": 19,
+      "time": 20,
+      "tip-cont": 1,
+      "tip-text": 1,
+      "title": 22,
+      "user": 2,
+      "vertical": 2,
+      "with-fil": 1,
+      "with-sid": 1
+    },
+    "data_attributes": [
+      "data-apm-fmp-pre-module",
+      "data-formula-asset",
+      "data-formula-cdn-retry",
+      "data-height",
+      "data-hp-bound",
+      "data-hp-container-rel",
+      "data-hp-kind",
+      "data-href",
+      "data-index",
+      "data-inject",
+      "data-load-status",
+      "data-logged",
+      "data-v-0755b6ef",
+      "data-v-0755b6ef-s",
+      "data-v-0ab24b8a",
+      "data-v-10865b47",
+      "data-v-141cfafe",
+      "data-v-141cfafe-s",
+      "data-v-2ed9bdf4",
+      "data-v-2ed9bdf4-s",
+      "data-v-32e6fa31",
+      "data-v-39ecb380",
+      "data-v-3c606868",
+      "data-v-3d9884cc",
+      "data-v-41d0c1be",
+      "data-v-41d0c1be-s",
+      "data-v-45d84c74",
+      "data-v-4e500268",
+      "data-v-50d98839",
+      "data-v-51ec0135",
+      "data-v-55b36ac6",
+      "data-v-57f184c4",
+      "data-v-5cde0260",
+      "data-v-6bbce164",
+      "data-v-7a413e2c",
+      "data-v-7bd4f6aa",
+      "data-v-7d75b457",
+      "data-v-7f2d70ca",
+      "data-v-820f2ae6",
+      "data-v-87beb1be",
+      "data-v-9403e00c",
+      "data-v-ab401f42",
+      "data-v-d127a10c",
+      "data-v-d8534c3e",
+      "data-v-d8534c3e-s",
+      "data-v-da963056",
+      "data-v-da963056-s",
+      "data-v-dfc9aca0",
+      "data-v-e666847e",
+      "data-v-e666847e-s",
+      "data-v-e9a570b2",
+      "data-v-eb91fffe",
+      "data-v-eec09670",
+      "data-v-f6c0a3e4",
+      "data-v-f6c0a3e4-s",
+      "data-width",
+      "data-xhs-img"
+    ],
+    "data_test_ids": {},
+    "id_selectors": {
+      "": 4,
+      "AlertCircle": 1,
+      "Android": 1,
+      "IOS": 1,
+      "Polygon": 1,
+      "__lottie_element_15": 1,
+      "__lottie_element_2": 1,
+      "__lottie_element_4": 1,
+      "__lottie_element_8": 1,
+      "a": 8,
+      "aboutUs": 1,
+      "addM": 1,
+      "add_b": 1,
+      "add_circle": 1,
+      "add_m": 1,
+      "agreed": 1,
+      "aiArrowLeft": 1,
+      "aiArrowRight": 1,
+      "aiChat": 1,
+      "aiChatNormal": 1,
+      "aiCollect": 1,
+      "aiDotRecommend": 1,
+      "aiFilter": 1,
+      "aiFold": 1,
+      "aiLike": 1,
+      "aiPicture": 1,
+      "alert": 1,
+      "all": 1,
+      "app": 1,
+      "arrowBackRight": 1,
+      "arrowDown": 1,
+      "arrowRight": 1,
+      "arrow_down_double_b": 1,
+      "arrow_left": 1,
+      "arrow_right": 1,
+      "arrow_right_f": 1,
+      "arrow_right_top": 1,
+      "arrow_top": 1,
+      "ask_ai_icon": 1,
+      "automa-palette": 1,
+      "back": 2,
+      "camera_close": 1,
+      "change": 1,
+      "channel-container": 1,
+      "chat": 1,
+      "chatHistory": 1,
+      "checkRoundFalse": 1,
+      "checkRoundTrue": 1,
+      "check_mark": 1,
+      "checkboxHalf": 1,
+      "checkmark": 1,
+      "chevron_down": 1,
+      "clock": 1,
+      "close": 2,
+      "close_b": 1,
+      "coffee_leave": 1,
+      "collect": 1,
+      "collect_small": 1,
+      "collected": 1,
+      "comment": 1,
+      "comment_audio_icon_dark": 1,
+      "comment_audio_icon_light": 1,
+      "company": 1,
+      "convention_b": 1,
+      "copy_f": 1,
+      "creator": 1,
+      "danmaku-off": 1,
+      "danmaku-on": 1,
+      "dark_mode": 1,
+      "delete": 1,
+      "delete_back": 1,
+      "dianSearch": 1,
+      "done": 1,
+      "download": 1,
+      "emoji": 1,
+      "exclamation_marks_b": 1,
+      "exit": 1,
+      "explore-guide-menu": 1,
+      "explore-guide-refresh": 1,
+      "famous": 1,
+      "fans_person": 1,
+      "female": 1,
+      "fileAlways": 1,
+      "fileError": 1,
+      "fire": 1,
+      "global": 1,
+      "group": 1,
+      "history": 1,
+      "home": 1,
+      "hot": 1,
+      "hotspot": 1,
+      "ic_arrow_left": 1,
+      "ic_close": 1,
+      "ic_dragger": 1,
+      "ic_link": 1,
+      "ic_qq": 1,
+      "ic_share": 1,
+      "ic_wechat": 1,
+      "ic_weibo": 1,
+      "icon_back": 1,
+      "illegal": 1,
+      "image": 1,
+      "imgNote": 1,
+      "imgNoteSelect": 1,
+      "light_mode": 1,
+      "like": 1,
+      "liked": 1,
+      "link-guide": 1,
+      "link_b": 1,
+      "link_c": 1,
+      "live": 1,
+      "livephoto": 1,
+      "livephoto_slash": 1,
+      "load_error": 1,
+      "loading": 1,
+      "loading_mini": 1,
+      "location": 1,
+      "lock": 1,
+      "login_checked": 1,
+      "male": 1,
+      "me": 1,
+      "mention": 1,
+      "mention_b": 1,
+      "menu": 2,
+      "more": 1,
+      "network": 1,
+      "newChat": 1,
+      "nioPlay": 1,
+      "not_found": 1,
+      "noteSingle": 1,
+      "notification": 1,
+      "pause": 1,
+      "pdf": 1,
+      "phone": 1,
+      "picture": 1,
+      "placeholder": 1,
+      "play": 1,
+      "play-s": 1,
+      "plus": 1,
+      "ppt": 1,
+      "private": 1,
+      "qq_f": 1,
+      "red": 1,
+      "reload": 1,
+      "reply": 1,
+      "right": 1,
+      "right-arrow": 1,
+      "scan_qr": 1,
+      "search": 1,
+      "search-input": 1,
+      "search_user_info_skeleton": 1,
+      "setting": 1,
+      "share-icon": 1,
+      "share_new": 1,
+      "skeleton_l": 1,
+      "skeleton_m": 1,
+      "skeleton_s": 1,
+      "small-more-info": 1,
+      "speaker": 1,
+      "success": 2,
+      "switch_dot": 1,
+      "tab_btn_left": 1,
+      "tab_btn_right": 1,
+      "thanks": 1,
+      "thumbUp": 1,
+      "toLeft": 1,
+      "transshipment": 1,
+      "user": 2,
+      "user_avatar_skeleton": 1,
+      "user_banned": 1,
+      "user_blocked": 1,
+      "user_empty_collect": 1,
+      "user_empty_like": 1,
+      "user_info_skeleton": 1,
+      "user_skeleton_s": 1,
+      "vector-left": 1,
+      "video": 1,
+      "warning_b": 1,
+      "wechat": 1,
+      "weibo_f": 1,
+      "word": 1,
+      "xhs": 1,
+      "xhs_watermark": 1
+    }
+  },
+  "timestamp": "2026-05-30T10:10:30.983Z",
+  "url": "https://www.xiaohongshu.com/search_result?keyword=test&type=51",
+  "verification": {
+    "detected": false,
+    "hasVerifyFrame": false,
+    "hasVerifyPhrase": false
+  }
+}

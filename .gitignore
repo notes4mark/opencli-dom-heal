@@ -1,0 +1,6 @@
+node_modules/
+.claude/
+*.tgz
+.env
+.vscode/
+baselines/test-snapshots-*/

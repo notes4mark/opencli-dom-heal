@@ -1,0 +1,1324 @@
+{
+  "schema_version": 2,
+  "site": "doubao",
+  "updated": "2026-05-30T07:00:00.000Z",
+  "source": {
+    "adapter_path": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/",
+    "source_files": [
+      "utils.js"
+    ],
+    "extraction_method": "manual",
+    "extraction_date": "2026-05-25T00:00:00Z",
+    "analysis_hints": {
+      "link_pattern": "a[href*=\"/chat/\"]",
+      "link_exclude_paths": [
+        "/chat/create-image",
+        "/chat/drive",
+        "/chat/new-thread"
+      ],
+      "link_id_regex": "/\\/chat\\/(\\d{10,})/",
+      "message_item_selectors": [
+        "[class*=\"inner-item-\"]",
+        "[data-target-id=\"message-box-target-id\"]",
+        "[class*=\"top-item-\"]",
+        "[data-message-id]",
+        "[data-testid=\"union_message\"]"
+      ],
+      "message_role_heuristic": "bubble",
+      "user_bubble_selectors": [
+        "[class*=\"bg-g-send-msg-bubble\"]",
+        "[class*=\"send-message\"]"
+      ],
+      "assistant_bubble_selectors": [
+        ".flow-markdown-body",
+        ".md-box-root",
+        ".container-h3Yzeb",
+        "[class*=\"receive-message\"]"
+      ],
+      "button_scope_selector": ".chat-input, .chat-editor, [data-testid=\"chat_input\"], form, [role=\"form\"]",
+      "send_button_patterns": [
+        "发送",
+        "Send",
+        "Submit",
+        "发消息"
+      ],
+      "exclude_button_patterns": [
+        "新对话",
+        "New Chat",
+        "快速",
+        "视频生成",
+        "深入研究",
+        "图像生成",
+        "帮我写作",
+        "音乐生成",
+        "更多",
+        "上传",
+        "upload",
+        "麦克风",
+        "microphone",
+        "模式",
+        "mode",
+        "工具",
+        "tools",
+        "设置",
+        "settings",
+        "云盘",
+        "history",
+        "历史"
+      ],
+      "verification_phrases": [
+        "人机验证",
+        "完成安全验证",
+        "异常访问",
+        "滑动验证",
+        "拖动滑块"
+      ],
+      "extra_selectors": []
+    }
+  },
+  "roles": {
+    "message_list_container": {
+      "description": "Scrollable chat message list root element",
+      "category": "container",
+      "selectors": [
+        {
+          "css": "[class*='message-list']",
+          "type": "class-substring",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "ok",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "css": "[data-testid='message-list']",
+          "type": "data-testid",
+          "priority": 2,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        }
+      ]
+    },
+    "message_item": {
+      "description": "Individual message wrapper in the chat list (used to discover conversation blocks)",
+      "category": "container",
+      "selectors": [
+        {
+          "css": "[class*='inner-item-']",
+          "type": "class-substring",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "ok",
+              "count": 4
+            },
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "ok",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "css": "[data-target-id='message-box-target-id']",
+          "type": "attribute",
+          "priority": 2,
+          "stability": "high",
+          "source": {
+            "file": "dom-heal: discovered via browser inspection",
+            "extracted": "2026-05-30"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "ok",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "css": "[class*='top-item-']",
+          "type": "class-substring",
+          "priority": 3,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "ok",
+              "count": 1
+            },
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[data-message-id]",
+          "type": "attribute",
+          "priority": 4,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "ok",
+              "count": 4
+            },
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[class*='item-kDun2N']",
+          "type": "class-substring",
+          "priority": 5,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[data-testid='union_message']",
+          "type": "data-testid",
+          "priority": 6,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[data-testid='message-block-container']",
+          "type": "data-testid",
+          "priority": 7,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        }
+      ]
+    },
+    "user_message": {
+      "description": "User message bubble (sent by the human)",
+      "category": "content",
+      "selectors": [
+        {
+          "css": "[class*='bg-g-send-msg-bubble']",
+          "type": "class-substring",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "ok",
+              "count": 2
+            },
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "ok",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "css": "[data-testid='send_message']",
+          "type": "data-testid",
+          "priority": 2,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[class*='send-message']",
+          "type": "class-substring",
+          "priority": 3,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[data-foundation-type='send-message-action-bar']",
+          "type": "attribute",
+          "priority": 4,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        }
+      ]
+    },
+    "assistant_message": {
+      "description": "AI response bubble (from Doubao assistant)",
+      "category": "content",
+      "selectors": [
+        {
+          "css": ".flow-markdown-body",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": ".md-box-root",
+          "type": "class-exact",
+          "priority": 2,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "ok",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "css": ".container-h3Yzeb",
+          "type": "class-exact",
+          "priority": 3,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "ok",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "css": "[data-testid='receive_message']",
+          "type": "data-testid",
+          "priority": 4,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[data-testid*='receive_message']",
+          "type": "data-testid-substring",
+          "priority": 5,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[class*='receive-message']",
+          "type": "class-substring",
+          "priority": 6,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[class*='bg-g-receive-msg-bubble']",
+          "type": "class-substring",
+          "priority": 7,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[data-foundation-type='receive-message-action-bar']",
+          "type": "attribute",
+          "priority": 8,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        }
+      ]
+    },
+    "message_text": {
+      "description": "Text content extraction selectors within a message bubble",
+      "category": "content",
+      "selectors": [
+        {
+          "css": "[data-testid='message_text_content']",
+          "type": "data-testid",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[data-testid='message_content']",
+          "type": "data-testid",
+          "priority": 2,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[data-testid*='message_text']",
+          "type": "data-testid-substring",
+          "priority": 3,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[data-testid*='message_content']",
+          "type": "data-testid-substring",
+          "priority": 4,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[class*='message-text']",
+          "type": "class-substring",
+          "priority": 5,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[class*='message-content']",
+          "type": "class-substring",
+          "priority": 6,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": ".flow-markdown-body",
+          "type": "class-exact",
+          "priority": 7,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": ".md-box-root",
+          "type": "class-exact",
+          "priority": 8,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "ok",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "css": ".container-h3Yzeb",
+          "type": "class-exact",
+          "priority": 9,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "ok",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "css": "[class*='bg-g-send-msg-bubble']",
+          "type": "class-substring",
+          "priority": 10,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "ok",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "css": "[class*='bg-g-receive-msg-bubble']",
+          "type": "class-substring",
+          "priority": 11,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[class*='bubble']",
+          "type": "class-substring",
+          "priority": 12,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        }
+      ]
+    },
+    "composer_textarea": {
+      "description": "Message input textarea or contenteditable element",
+      "category": "input",
+      "selectors": [
+        {
+          "css": "textarea[data-testid='chat_input_input']",
+          "type": "data-testid",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[data-testid='chat_input'] textarea",
+          "type": "data-testid",
+          "priority": 2,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": ".chat-input textarea",
+          "type": "class-exact",
+          "priority": 3,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": ".chat-input [contenteditable='true']",
+          "type": "class-exact",
+          "priority": 4,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": ".chat-editor textarea",
+          "type": "class-exact",
+          "priority": 5,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": ".chat-editor [contenteditable='true']",
+          "type": "class-exact",
+          "priority": 6,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "textarea[placeholder*='发消息']",
+          "type": "attribute",
+          "priority": 7,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            },
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "ok",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "css": "textarea[placeholder*='Message']",
+          "type": "attribute",
+          "priority": 8,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[contenteditable='true'][placeholder*='发消息']",
+          "type": "attribute",
+          "priority": 9,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[contenteditable='true'][placeholder*='Message']",
+          "type": "attribute",
+          "priority": 10,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[contenteditable='true'][aria-label*='发消息']",
+          "type": "attribute",
+          "priority": 11,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[contenteditable='true'][aria-label*='Message']",
+          "type": "attribute",
+          "priority": 12,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "textarea",
+          "type": "tag",
+          "priority": 13,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            },
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "ok",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "css": "[contenteditable='true']",
+          "type": "attribute",
+          "priority": 14,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        }
+      ]
+    },
+    "send_button": {
+      "description": "Send/submit button in the chat composer area",
+      "category": "button",
+      "selectors": [
+        {
+          "css": "button#flow-end-msg-send",
+          "type": "id",
+          "priority": 1,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            },
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "ok",
+              "count": 1
+            }
+          ],
+          "note": "Conditional: only rendered when textarea has text"
+        },
+        {
+          "css": "button[class*='bg-dbx-text-highlight']",
+          "type": "class-substring",
+          "priority": 2,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            },
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "ok",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "css": "button[class*='bg-dbx-fill-highlight']",
+          "type": "class-substring",
+          "priority": 3,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            },
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "ok",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "css": "button[type='submit']",
+          "type": "attribute",
+          "priority": 4,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            },
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "[class*='send']",
+          "type": "class-substring",
+          "priority": 5,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            },
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        }
+      ]
+    },
+    "conversation_link": {
+      "description": "Sidebar history conversation links",
+      "category": "link",
+      "selectors": [
+        {
+          "css": "a[href*='/chat/']",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "timestamp": "2026-05-25T05:40:08.081Z",
+              "status": "broken",
+              "count": 0
+            },
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "ok",
+              "count": 10
+            }
+          ]
+        }
+      ]
+    },
+    "captcha_indicator": {
+      "description": "Verification/CAPTCHA challenge elements that block automation",
+      "category": "indicator",
+      "note": "Absence is healthy — only present during verification challenges",
+      "selectors": [
+        {
+          "css": "iframe[src*='captcha']",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "note": "Expected absent during normal operation",
+          "history": [
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "ok",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "iframe[src*='verify']",
+          "type": "attribute",
+          "priority": 2,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "note": "Expected absent during normal operation",
+          "history": [
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "ok",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "input[placeholder*='验证码']",
+          "type": "attribute",
+          "priority": 3,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "note": "Expected absent during normal operation",
+          "history": [
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "ok",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "css": "input[aria-label*='验证码']",
+          "type": "attribute",
+          "priority": 4,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "note": "Expected absent during normal operation",
+          "history": [
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "ok",
+              "count": 0
+            }
+          ]
+        }
+      ]
+    },
+    "meeting_card": {
+      "description": "Meeting minutes card in conversation view",
+      "category": "container",
+      "note": "Conditional — only present when meeting minutes exist in conversation",
+      "selectors": [
+        {
+          "css": "[data-testid='meeting-minutes-card']",
+          "type": "data-testid",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "note": "Conditional: only present with meeting minutes",
+          "history": [
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "ok",
+              "count": 0
+            }
+          ]
+        }
+      ]
+    },
+    "new_chat_button": {
+      "description": "New conversation / clear context button",
+      "category": "button",
+      "selectors": [
+        {
+          "css": "#flow_chat_sidebar div.cursor-pointer:has(span:has-text('新对话'))",
+          "type": "compound",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "dom-heal: discovered via browser inspection",
+            "extracted": "2026-05-30"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "ok",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "css": "div:has(> span:has-text('新对话'))",
+          "type": "text",
+          "priority": 2,
+          "stability": "medium",
+          "source": {
+            "file": "dom-heal: discovered via browser inspection",
+            "extracted": "2026-05-30"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "ok",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "css": "button:has-text('新对话')",
+          "type": "text",
+          "priority": 3,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "timestamp": "2026-05-30T06:55:05.000Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "snapshots": {
+    "latest": "2026-05-25T05-40-08-080Z-0001.json",
+    "history": [
+      "2026-05-25T05-40-08-080Z-0001.json"
+    ]
+  },
+  "_meta": {
+    "migrated_from": "v1",
+    "migrated_at": "2026-05-25T03:39:41.886Z",
+    "v1_version": 1
+  }
+}

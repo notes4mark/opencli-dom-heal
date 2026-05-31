@@ -1,0 +1,537 @@
+{
+  "schema_version": 1,
+  "updated": "2026-05-31T02:48:50.167Z",
+  "sites": {
+    "doubao": {
+      "adapter_path": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/doubao/",
+      "default_url": "https://www.doubao.com/chat",
+      "source_files": [
+        "utils.js"
+      ],
+      "baseline_version": 2,
+      "health": "degraded",
+      "last_check": "2026-05-30T07:00:00Z",
+      "selector_count": 61,
+      "role_count": 11,
+      "broken_roles": [],
+      "categories": [
+        "button",
+        "container",
+        "content",
+        "indicator",
+        "input",
+        "link"
+      ],
+      "notes": "send_button P1-P3 fixed (conditionally rendered, analysis script pre-types text). Added [data-target-id='message-box-target-id'] for message_item. captcha/meeting_card marked ok (expected absent). 8 roles degraded due to broken fallback selectors — all have working primary selectors.",
+      "degraded_roles": [
+        "message_list_container",
+        "message_item",
+        "user_message",
+        "assistant_message",
+        "message_text",
+        "composer_textarea",
+        "send_button",
+        "new_chat_button"
+      ]
+    },
+    "deepseek": {
+      "adapter_path": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/deepseek/",
+      "default_url": "https://chat.deepseek.com",
+      "source_files": [
+        "utils.js"
+      ],
+      "baseline_version": 2,
+      "health": "critical",
+      "last_check": "2026-05-30T08:09:48.909Z",
+      "selector_count": 20,
+      "role_count": 11,
+      "broken_roles": [
+        "model_radio"
+      ],
+      "categories": [
+        "button",
+        "container",
+        "content",
+        "indicator",
+        "input",
+        "interactive",
+        "link"
+      ],
+      "degraded_roles": [
+        "composer_textarea",
+        "thinking_container",
+        "markdown_content",
+        "thinking_header"
+      ],
+      "notes": "Live-tested 2026-05-30. Analysis script now auto-navigates into conversation for conditional roles. .ds-markdown--think → .ds-think-content (new). .ds-thinking-header → removed, now text-based. .prose → removed, .ds-markdown-paragraph added. 3 roles degraded due to broken fallback selectors (old removed classes)."
+    },
+    "chatgpt": {
+      "adapter_path": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/",
+      "default_url": "https://chatgpt.com",
+      "source_files": [
+        "utils.js"
+      ],
+      "baseline_version": 2,
+      "health": "unknown",
+      "last_check": null,
+      "selector_count": 17,
+      "role_count": 8,
+      "broken_roles": [],
+      "categories": [
+        "container",
+        "input",
+        "button",
+        "link",
+        "indicator",
+        "content"
+      ],
+      "notes": "ChatGPT web adapter. Stable data-testid attributes on key elements. i18n wrapper means aria-label changes with locale."
+    },
+    "claude": {
+      "adapter_path": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/claude/",
+      "default_url": "https://claude.ai/new",
+      "source_files": [
+        "utils.js"
+      ],
+      "baseline_version": 2,
+      "health": "unknown",
+      "last_check": null,
+      "selector_count": 14,
+      "role_count": 10,
+      "broken_roles": [],
+      "categories": [
+        "container",
+        "input",
+        "button",
+        "link",
+        "indicator",
+        "interactive"
+      ],
+      "notes": "Claude.ai web adapter. Heavy reliance on data-testid attributes. Class names use font- prefix (proprietary)."
+    },
+    "xiaohongshu": {
+      "adapter_path": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/xiaohongshu/",
+      "default_url": "https://www.xiaohongshu.com/explore",
+      "source_files": [
+        "search.js",
+        "publish.js",
+        "note-helpers.js",
+        "user-helpers.js",
+        "feed.js"
+      ],
+      "baseline_version": 2,
+      "health": "degraded",
+      "last_check": "2026-05-30T10:10:31.141Z",
+      "selector_count": 19,
+      "role_count": 9,
+      "broken_roles": [
+        "publish_title_input",
+        "publish_button"
+      ],
+      "degraded_roles": [
+        "search_result_item",
+        "note_link"
+      ],
+      "categories": [
+        "button",
+        "container",
+        "content",
+        "indicator",
+        "input",
+        "link"
+      ],
+      "notes": "Live-verified 2026-05-30. 5 dead/made-up selectors removed (.note-title, .author-name, .nick-name, .like-count, a[href*=\"/note/\"]). publish_* roles broken (topology: creator center only). search_result selectors degraded (topology: search page only). All explore-feed roles OK. No data-* attributes. Class prefixes stable and semantic."
+    },
+    "boss": {
+      "adapter_path": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/boss/",
+      "default_url": "https://www.zhipin.com/web/chat/index",
+      "source_files": [
+        "utils.js"
+      ],
+      "baseline_version": 2,
+      "health": "unknown",
+      "last_check": null,
+      "selector_count": 12,
+      "role_count": 4,
+      "broken_roles": [],
+      "categories": [
+        "input",
+        "button",
+        "container",
+        "indicator"
+      ],
+      "notes": "BOSS Zhipin recruitment platform. Chat uses contenteditable divs scoped to .chat-editor. Dual-mode: recruiter side and geek (job-seeker) side. API-driven with UI automation fallback."
+    },
+    "test-integ-c1d03bf8": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-25T06:37:30.101Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-162514f5": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-25T06:39:51.663Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-f3aa3d8f": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-25T06:42:24.573Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-cbaf8bc1": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-25T06:59:13.010Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-registry-e3bebe4b": {
+      "baseline_version": 2,
+      "selector_count": 2,
+      "role_count": 2,
+      "last_check": "2026-05-25T07:20:28.771Z",
+      "health": "degraded",
+      "broken_roles": [
+        "composer"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button",
+        "input"
+      ]
+    },
+    "test-integ-2fd81426": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-25T07:20:28.777Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-e1b82cd0": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-25T07:22:59.736Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-5c054f63": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-25T07:29:27.767Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-ed969c85": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-25T07:31:14.784Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-d0483c91": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-30T07:03:44.345Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-9592b530": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-30T07:04:41.180Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-09c54009": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-30T07:05:03.936Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-d2d8d791": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-30T07:19:59.570Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-82f755dc": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-30T07:42:50.273Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-1f3a5d95": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-30T07:43:45.615Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-49e7d572": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-30T07:45:15.975Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-6c0a890d": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-30T07:47:48.231Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-296300c2": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-30T08:07:41.114Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-c8e96098": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-30T08:10:13.880Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "zhihu": {
+      "adapter_path": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/zhihu/",
+      "default_url": "https://www.zhihu.com",
+      "source_files": [
+        "download.js",
+        "search.js",
+        "hot.js",
+        "answer-detail.js",
+        "comment.js",
+        "answer.js",
+        "question.js",
+        "recommend.js"
+      ],
+      "baseline_version": 2,
+      "health": "critical",
+      "last_check": "2026-05-30T09:37:16.051Z",
+      "selector_count": 25,
+      "role_count": 12,
+      "broken_roles": [
+        "article_title",
+        "article_time"
+      ],
+      "degraded_roles": [
+        "article_content"
+      ],
+      "categories": [
+        "button",
+        "container",
+        "content",
+        "indicator",
+        "input"
+      ],
+      "notes": "Initial baseline from onboard + live inspection. API-driven adapter — only download.js uses DOM selectors. Article detail pages may have anti-bot protection affecting lazy-loaded content."
+    },
+    "test-integ-bf1342ae": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-30T09:37:27.463Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-756525a4": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-30T09:37:56.416Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-f3a78078": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-30T09:55:09.693Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-f6ad67f9": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-30T10:11:18.229Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    },
+    "test-integ-251410dd": {
+      "baseline_version": 2,
+      "selector_count": 1,
+      "role_count": 1,
+      "last_check": "2026-05-31T02:48:50.167Z",
+      "health": "critical",
+      "broken_roles": [
+        "send_button"
+      ],
+      "degraded_roles": [],
+      "categories": [
+        "button"
+      ]
+    }
+  }
+}

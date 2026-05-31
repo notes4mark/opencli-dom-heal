@@ -1,0 +1,27 @@
+{
+  "name": "opencli-dom-heal",
+  "version": "1.0.0",
+  "description": "DOM selector health monitoring and self-repair for OpenCLI browser adapters",
+  "type": "module",
+  "main": "cli.mjs",
+  "bin": {
+    "dom-heal": "./cli.mjs"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "opencli",
+    "browser-automation",
+    "dom",
+    "selector",
+    "self-healing",
+    "health-monitoring"
+  ],
+  "author": "Mark Ye <markye@abc.ai>",
+  "license": "MIT",
+  "devDependencies": {
+    "vitest": "^1.0.0"
+  }
+}

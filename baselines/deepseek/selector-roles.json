@@ -1,0 +1,488 @@
+{
+  "schema_version": 2,
+  "site": "deepseek",
+  "updated": "2026-05-30T08:09:48.903Z",
+  "source": {
+    "adapter_path": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/deepseek/",
+    "source_files": [
+      "utils.js"
+    ],
+    "extraction_method": "manual",
+    "extraction_date": "2026-05-25T00:00:00Z",
+    "analysis_hints": {
+      "link_pattern": "a[href*=\"/a/chat/s/\"]",
+      "message_item_selectors": [
+        ".ds-message"
+      ],
+      "message_role_heuristic": "class-count",
+      "button_css_selectors": [
+        "div[role=\"button\"]",
+        "button",
+        "[class*=\"ds-icon-button\"]"
+      ],
+      "content_selectors": [
+        ".ds-markdown",
+        ".ds-markdown-paragraph",
+        ".ds-think-content"
+      ],
+      "verification_phrases": [],
+      "extra_selectors": [
+        "ds_classes"
+      ]
+    }
+  },
+  "roles": {
+    "message_item": {
+      "description": "All message bubbles (user and AI). DeepSeek uses a single class for both roles; user messages are distinguished by having extra CSS module classnames. Conditional: only exists inside a conversation view, not on the main chat list page.",
+      "category": "container",
+      "selectors": [
+        {
+          "css": ".ds-message",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/deepseek/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Verified working inside conversation view. Health check now auto-navigates into conversation."
+            }
+          ]
+        }
+      ]
+    },
+    "composer_textarea": {
+      "description": "Message input textarea. DeepSeek uses a placeholder-based selector.",
+      "category": "input",
+      "selectors": [
+        {
+          "css": "textarea[placeholder*='DeepSeek']",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/deepseek/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Verified working. Matches exactly 1 textarea on both main page and conversation view."
+            }
+          ]
+        },
+        {
+          "css": "textarea",
+          "type": "tag",
+          "priority": 2,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/deepseek/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Verified working."
+            }
+          ]
+        },
+        {
+          "css": "[contenteditable='true']",
+          "type": "attribute",
+          "priority": 3,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/deepseek/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Verified working."
+            },
+            {
+              "timestamp": "2026-05-30T08:09:48.903Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        }
+      ]
+    },
+    "send_button": {
+      "description": "Send button. DeepSeek uses div[role='button'] elements; the send button is the last one in the composer container, excluding toggle buttons.",
+      "category": "button",
+      "selectors": [
+        {
+          "css": "div[role='button']:not(.ds-toggle-button)",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/deepseek/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Verified working. Matches 100+ elements including the send button."
+            }
+          ]
+        }
+      ]
+    },
+    "conversation_link": {
+      "description": "Sidebar history conversation links. DeepSeek uses a specific URL pattern for chat sessions.",
+      "category": "link",
+      "selectors": [
+        {
+          "css": "a[href*='/a/chat/s/']",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/deepseek/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Verified working. Matches ~100 links on main page. Previous false alarm (reported BROKEN) was due to page not being loaded."
+            }
+          ]
+        }
+      ]
+    },
+    "thinking_container": {
+      "description": "DeepThink reasoning/toggle section that contains chain-of-thought before the final answer. Conditional: only present when DeepThink is enabled for the conversation.",
+      "category": "content",
+      "selectors": [
+        {
+          "css": ".ds-think-content",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "dom-heal: discovered via browser inspection",
+            "extracted": "2026-05-30T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "New replacement for .ds-markdown--think. Verified with DeepThink enabled."
+            }
+          ]
+        },
+        {
+          "css": "[class*='think']",
+          "type": "class-substring",
+          "priority": 2,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/deepseek/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "degraded",
+              "note": "Now only matches .ds-think-content (1 element when DeepThink enabled). Previously matched .ds-markdown--think which was broader. Still works as fallback."
+            },
+            {
+              "timestamp": "2026-05-30T08:09:48.903Z",
+              "status": "ok",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "css": ".ds-markdown--think",
+          "type": "class-exact",
+          "priority": 3,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/deepseek/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "broken",
+              "note": "Class removed by DeepSeek. Replaced by .ds-think-content."
+            }
+          ]
+        }
+      ]
+    },
+    "model_radio": {
+      "description": "Model selection radio buttons (Instant / Expert / Vision). Selected by position index.",
+      "category": "interactive",
+      "selectors": [
+        {
+          "css": "div[role='radio']",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/deepseek/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Verified working. Matches 2 radio buttons."
+            },
+            {
+              "timestamp": "2026-05-30T08:09:48.903Z",
+              "status": "broken",
+              "count": 0
+            }
+          ]
+        }
+      ]
+    },
+    "sidebar_toggle": {
+      "description": "Sidebar collapse/expand toggle button for accessing conversation history",
+      "category": "container",
+      "selectors": [
+        {
+          "css": "div[tabindex='0'][role='button']",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/deepseek/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Verified working. Matches 100+ elements including sidebar toggle."
+            }
+          ]
+        }
+      ]
+    },
+    "feature_toggle": {
+      "description": "DeepThink and Search feature toggle switches",
+      "category": "interactive",
+      "selectors": [
+        {
+          "css": ".ds-toggle-button",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/deepseek/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Verified working. Matches 2 toggle buttons (DeepThink, Search)."
+            }
+          ]
+        },
+        {
+          "css": ".ds-toggle-button--selected",
+          "type": "class-exact",
+          "priority": 2,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/deepseek/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Verified working."
+            }
+          ]
+        }
+      ]
+    },
+    "login_indicator": {
+      "description": "User avatar image indicating authenticated state",
+      "category": "indicator",
+      "selectors": [
+        {
+          "css": "img[src*='user-avatar']",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/deepseek/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Verified working. Matches 1 element (user avatar)."
+            }
+          ]
+        }
+      ]
+    },
+    "markdown_content": {
+      "description": "Markdown-rendered AI response content. Conditional: only exists inside a conversation view.",
+      "category": "content",
+      "selectors": [
+        {
+          "css": ".ds-markdown",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/deepseek/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Verified working inside conversation view."
+            }
+          ]
+        },
+        {
+          "css": ".ds-markdown-paragraph",
+          "type": "class-exact",
+          "priority": 2,
+          "stability": "high",
+          "source": {
+            "file": "dom-heal: discovered via browser inspection",
+            "extracted": "2026-05-30T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "New granular class for markdown paragraphs. Works inside conversations."
+            }
+          ]
+        },
+        {
+          "css": ".prose",
+          "type": "class-exact",
+          "priority": 3,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/deepseek/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "broken",
+              "note": "Class removed by DeepSeek. No direct replacement; use .ds-markdown instead."
+            }
+          ]
+        }
+      ]
+    },
+    "thinking_header": {
+      "description": "Thinking time display header. Conditional: only present when DeepThink is enabled. The old .ds-thinking-header class was removed; header text ('已思考（用时 X 秒）') is now in a hashed div before .ds-think-content.",
+      "category": "content",
+      "selectors": [
+        {
+          "css": ".ds-message (text match for thinking header)",
+          "type": "text",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "dom-heal: discovered via browser inspection",
+            "extracted": "2026-05-30T00:00:00Z"
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "New text-based check. Header text '已思考（用时 X 秒）' appears inside .ds-message when DeepThink is enabled."
+            }
+          ]
+        },
+        {
+          "css": ".ds-thinking-header",
+          "type": "class-exact",
+          "priority": 2,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/deepseek/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "broken",
+              "note": "Class removed by DeepSeek. Header text now appears in a hashed div before .ds-think-content."
+            }
+          ]
+        },
+        {
+          "css": "[class*='think'] ~ *",
+          "type": "sibling",
+          "priority": 3,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/deepseek/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "broken",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "broken",
+              "note": "Sibling approach no longer works with new DOM structure."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "snapshots": {
+    "latest": "2026-05-30T08-09-48-903Z-0001.json",
+    "history": [
+      "2026-05-30T08-09-48-903Z-0001.json"
+    ]
+  },
+  "_meta": {
+    "migrated_from": "v1",
+    "migrated_at": "2026-05-25T03:39:41.886Z",
+    "v1_version": 1
+  }
+}

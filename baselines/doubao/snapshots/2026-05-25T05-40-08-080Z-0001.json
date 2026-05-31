@@ -1,0 +1,699 @@
+{
+  "url": "https://www.doubao.com/chat",
+  "timestamp": "2026-05-25T05:40:08.049Z",
+  "layout": {
+    "mainContainers": [
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "container-h3Yzeb",
+        "role": null,
+        "childCount": 1,
+        "visible": false
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "container-qX9Csx md-box-root",
+        "role": null,
+        "childCount": 1,
+        "visible": false
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "container-fBOrXO",
+        "role": null,
+        "childCount": 1,
+        "visible": false
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "container-enLQFx",
+        "role": null,
+        "childCount": 1,
+        "visible": false
+      },
+      {
+        "tag": "SPAN",
+        "id": null,
+        "class": "container-wTfUs6 math-inline",
+        "role": null,
+        "childCount": 1,
+        "visible": false
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "bp5-overflow-list message-action-button-main flex w-fit min-w-0 items-center gap-10 self-center",
+        "role": null,
+        "childCount": 5,
+        "visible": false
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "container-h3Yzeb",
+        "role": null,
+        "childCount": 1,
+        "visible": false
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "container-qX9Csx md-box-root",
+        "role": null,
+        "childCount": 3,
+        "visible": false
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "container-fBOrXO",
+        "role": null,
+        "childCount": 1,
+        "visible": false
+      },
+      {
+        "tag": "H3",
+        "id": null,
+        "class": "container-KCOKpE",
+        "role": null,
+        "childCount": 3,
+        "visible": false
+      }
+    ],
+    "scrollableContainers": []
+  },
+  "selectors": {
+    "data_test_ids": {},
+    "data_attributes": [
+      "data-button-mode",
+      "data-container-type",
+      "data-copy-telemetry",
+      "data-dbx-name",
+      "data-disabled",
+      "data-foundation-type",
+      "data-loading",
+      "data-message-id",
+      "data-name",
+      "data-observe-row",
+      "data-plugin-identifier",
+      "data-render-engine",
+      "data-slot",
+      "data-state",
+      "data-table-spillover",
+      "data-table-spillover-force-disable",
+      "data-target-id",
+      "data-trigger-type",
+      "data-visible"
+    ],
+    "id_selectors": {
+      "radix-:r11:": 1,
+      "to-bottom-button": 1
+    },
+    "class_prefixes": {
+      "message-": 6,
+      "opacity-": 17,
+      "transiti": 13,
+      "duration": 13,
+      "v_list-D": 1,
+      "scroller": 2,
+      "v_list_s": 1,
+      "scroll_h": 1,
+      "list_ite": 1,
+      "v_list_r": 6,
+      "v_list_t": 1,
+      "pl-8": 7,
+      "pr-0": 7,
+      "w-full": 46,
+      "max-dbx-": 9,
+      "my-0": 7,
+      "mx-auto": 7,
+      "max-w-(-": 7,
+      "has-[.si": 14,
+      "top-item": 1,
+      "inner-it": 4,
+      "flex": 41,
+      "flex-row": 13,
+      "justify-": 22,
+      "max-w-fu": 13,
+      "s-font-b": 6,
+      "text-s-c": 4,
+      "p-0": 4,
+      "rounded-": 19,
+      "bg-trans": 15,
+      "data-[at": 36,
+      "flex-col": 13,
+      "flex-gro": 6,
+      "min-w-0": 23,
+      "gap-8": 2,
+      "whitespa": 14,
+      "wrap-any": 2,
+      "sm:text-": 2,
+      "max-w-45": 2,
+      "px-16": 2,
+      "py-9": 2,
+      "w-fit": 5,
+      "bg-g-sen": 2,
+      "text-g-s": 2,
+      "!text-[l": 2,
+      "select-n": 21,
+      "h-40": 4,
+      "pointer-": 3,
+      "group": 4,
+      "relative": 15,
+      "space-y-": 2,
+      "[&>div:n": 2,
+      "containe": 22,
+      "md-box-r": 2,
+      "math-inl": 1,
+      "katex": 1,
+      "-right-1": 1,
+      "hidden": 4,
+      "bp5-over": 4,
+      "items-ce": 17,
+      "gap-10": 2,
+      "self-cen": 5,
+      "shrink-0": 11,
+      "font-[40": 11,
+      "[&_svg]:": 11,
+      "text-[14": 11,
+      "leading-": 12,
+      "gap-[4px": 11,
+      "p-[4px]": 11,
+      "ease-out": 12,
+      "hover:bg": 11,
+      "[&:is(:w": 11,
+      "outline-": 22,
+      "[&_svg:n": 11,
+      "[&_svg[d": 11,
+      "h-fit": 11,
+      "cursor-p": 12,
+      "text-dbx": 13,
+      "truncate": 11,
+      "absolute": 11,
+      "inset-[-": 11,
+      "mr-12": 2,
+      "h-12": 2,
+      "w-0": 2,
+      "border-[": 4,
+      "border-s": 2,
+      "first:hi": 2,
+      "last:hid": 2,
+      "[&:has(+": 2,
+      "gap-2": 2,
+      "inline-f": 1,
+      "overflow": 2,
+      "text-[15": 1,
+      "font-[50": 1,
+      "font-nor": 1,
+      "text-ell": 1,
+      "ml-2": 1,
+      "size-[12": 1,
+      "flex-shr": 1,
+      "spacing-": 2,
+      "!w-2": 1,
+      "voiceBut": 1,
+      "gap-12": 1,
+      "entry-bt": 2,
+      "suggest-": 10,
+      "title-sm": 3,
+      "semi-ico": 6,
+      "icon-LP9": 3,
+      "v_list_b": 1,
+      "bottom-i": 1,
+      "bottom-p": 2,
+      "bottom-c": 1,
+      "to-botto": 1,
+      "hidden-c": 1
+    }
+  },
+  "candidates": {
+    "text_inputs": [],
+    "buttons": [
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex shrink-0 items-center justify-center font-[400] whitespace-nowrap select-none [&_svg]:shrink-0 ",
+        "text": "",
+        "ariaLabel": "",
+        "title": "",
+        "type": null,
+        "disabled": false,
+        "visible": false,
+        "depth": 19,
+        "isSendLike": false,
+        "isExcluded": false,
+        "css": "button"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex shrink-0 items-center justify-center font-[400] whitespace-nowrap select-none [&_svg]:shrink-0 ",
+        "text": "",
+        "ariaLabel": "",
+        "title": "",
+        "type": null,
+        "disabled": false,
+        "visible": false,
+        "depth": 19,
+        "isSendLike": false,
+        "isExcluded": false,
+        "css": "button"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex shrink-0 items-center justify-center font-[400] whitespace-nowrap select-none [&_svg]:shrink-0 ",
+        "text": "",
+        "ariaLabel": "",
+        "title": "",
+        "type": null,
+        "disabled": false,
+        "visible": false,
+        "depth": 19,
+        "isSendLike": false,
+        "isExcluded": false,
+        "css": "button"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex shrink-0 items-center justify-center font-[400] whitespace-nowrap select-none [&_svg]:shrink-0 ",
+        "text": "",
+        "ariaLabel": "",
+        "title": "",
+        "type": null,
+        "disabled": false,
+        "visible": false,
+        "depth": 19,
+        "isSendLike": false,
+        "isExcluded": false,
+        "css": "button"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex shrink-0 items-center justify-center font-[400] whitespace-nowrap select-none [&_svg]:shrink-0 ",
+        "text": "",
+        "ariaLabel": "",
+        "title": "",
+        "type": null,
+        "disabled": false,
+        "visible": false,
+        "depth": 19,
+        "isSendLike": false,
+        "isExcluded": false,
+        "css": "button"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex shrink-0 items-center justify-center font-[400] whitespace-nowrap select-none [&_svg]:shrink-0 ",
+        "text": "",
+        "ariaLabel": "朗读",
+        "title": "",
+        "type": "button",
+        "disabled": false,
+        "visible": false,
+        "depth": 19,
+        "isSendLike": false,
+        "isExcluded": false,
+        "css": "button[type=\"button\"]"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex shrink-0 items-center justify-center font-[400] whitespace-nowrap select-none [&_svg]:shrink-0 ",
+        "text": "",
+        "ariaLabel": "",
+        "title": "",
+        "type": null,
+        "disabled": false,
+        "visible": false,
+        "depth": 19,
+        "isSendLike": false,
+        "isExcluded": false,
+        "css": "button"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex shrink-0 items-center justify-center font-[400] whitespace-nowrap select-none [&_svg]:shrink-0 ",
+        "text": "",
+        "ariaLabel": "",
+        "title": "",
+        "type": null,
+        "disabled": false,
+        "visible": false,
+        "depth": 19,
+        "isSendLike": false,
+        "isExcluded": false,
+        "css": "button"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex shrink-0 items-center justify-center font-[400] whitespace-nowrap select-none [&_svg]:shrink-0 ",
+        "text": "",
+        "ariaLabel": "",
+        "title": "",
+        "type": null,
+        "disabled": false,
+        "visible": false,
+        "depth": 19,
+        "isSendLike": false,
+        "isExcluded": false,
+        "css": "button"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex shrink-0 items-center justify-center font-[400] whitespace-nowrap select-none [&_svg]:shrink-0 ",
+        "text": "",
+        "ariaLabel": "",
+        "title": "",
+        "type": null,
+        "disabled": false,
+        "visible": false,
+        "depth": 19,
+        "isSendLike": false,
+        "isExcluded": false,
+        "css": "button"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "radix-:r11:",
+        "class": "",
+        "text": "",
+        "ariaLabel": "",
+        "title": "",
+        "type": "button",
+        "disabled": false,
+        "visible": false,
+        "depth": 19,
+        "isSendLike": false,
+        "isExcluded": false,
+        "css": "#radix-:r11:[type=\"button\"]"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex shrink-0 items-center justify-center font-[400] whitespace-nowrap select-none [&_svg]:shrink-0 ",
+        "text": "",
+        "ariaLabel": "",
+        "title": "",
+        "type": null,
+        "disabled": false,
+        "visible": false,
+        "depth": 19,
+        "isSendLike": false,
+        "isExcluded": false,
+        "css": "button"
+      }
+    ],
+    "scroll_containers": [],
+    "message_blocks": [
+      {
+        "selector": "[class*=\"inner-item-\"]",
+        "tag": "DIV",
+        "class": "w-full inner-item-BjaxFt",
+        "role": "User",
+        "textPreview": "1+1等于几？",
+        "textLength": 7,
+        "childCount": 1,
+        "hasUserBubble": true,
+        "hasAssistantBubble": false,
+        "visible": false,
+        "depth": 11
+      },
+      {
+        "selector": "[class*=\"inner-item-\"]",
+        "tag": "DIV",
+        "class": "w-full inner-item-BjaxFt",
+        "role": "User",
+        "textPreview": "北京未来三天的天气",
+        "textLength": 9,
+        "childCount": 1,
+        "hasUserBubble": true,
+        "hasAssistantBubble": false,
+        "visible": false,
+        "depth": 11
+      },
+      {
+        "selector": "[class*=\"inner-item-\"]",
+        "tag": "DIV",
+        "class": "w-full inner-item-BjaxFt",
+        "role": "Assistant",
+        "textPreview": "搜索 1 个关键词，参考 6 篇资料北京未来三天天气预报（5 月 24 日 - 5 月 26 日）北京市人民政府\n今天（5 月 24 日，周日）：多云，17.7℃~28℃，南风≤3 级。\n明天（5 月 25 日，周一）：中雨，17.9℃~22.8℃，东北风≤3 级。\n后天（5 月 26 日，周二）：多云，17℃~27.2℃，北风≤3 级。\n需要我把这三天的降水时段和风力变化整理成逐时预报吗？参考 ",
+        "textLength": 249,
+        "childCount": 1,
+        "hasUserBubble": false,
+        "hasAssistantBubble": true,
+        "visible": false,
+        "depth": 11
+      },
+      {
+        "selector": "[data-message-id]",
+        "tag": "DIV",
+        "class": "flex-row flex w-full justify-end",
+        "role": "User",
+        "textPreview": "1+1等于几？",
+        "textLength": 7,
+        "childCount": 1,
+        "hasUserBubble": true,
+        "hasAssistantBubble": false,
+        "visible": false,
+        "depth": 15
+      },
+      {
+        "selector": "[data-message-id]",
+        "tag": "DIV",
+        "class": "flex-row flex w-full justify-end",
+        "role": "User",
+        "textPreview": "北京未来三天的天气",
+        "textLength": 9,
+        "childCount": 1,
+        "hasUserBubble": true,
+        "hasAssistantBubble": false,
+        "visible": false,
+        "depth": 15
+      },
+      {
+        "selector": "[data-message-id]",
+        "tag": "DIV",
+        "class": "relative flex-row flex w-full",
+        "role": "Assistant",
+        "textPreview": "搜索 1 个关键词，参考 6 篇资料北京未来三天天气预报（5 月 24 日 - 5 月 26 日）北京市人民政府\n今天（5 月 24 日，周日）：多云，17.7℃~28℃，南风≤3 级。\n明天（5 月 25 日，周一）：中雨，17.9℃~22.8℃，东北风≤3 级。\n后天（5 月 26 日，周二）：多云，17℃~27.2℃，北风≤3 级。\n需要我把这三天的降水时段和风力变化整理成逐时预报吗？",
+        "textLength": 197,
+        "childCount": 1,
+        "hasUserBubble": false,
+        "hasAssistantBubble": true,
+        "visible": false,
+        "depth": 15
+      }
+    ],
+    "links": []
+  },
+  "health": {
+    "role_checks": {
+      "message_list_container": {
+        "working": [
+          {
+            "css": "[class*=\"message-list\"]",
+            "count": 2
+          }
+        ],
+        "broken": [
+          {
+            "css": "[data-testid=\"message-list\"]",
+            "count": 0
+          }
+        ],
+        "status": "degraded"
+      },
+      "message_item": {
+        "working": [
+          {
+            "css": "[class*=\"inner-item-\"]",
+            "count": 4
+          },
+          {
+            "css": "[class*=\"top-item-\"]",
+            "count": 1
+          },
+          {
+            "css": "[data-message-id]",
+            "count": 4
+          }
+        ],
+        "broken": [
+          {
+            "css": "[class*=\"item-kDun2N\"]",
+            "count": 0
+          },
+          {
+            "css": "[data-testid=\"union_message\"]",
+            "count": 0
+          }
+        ],
+        "status": "degraded"
+      },
+      "user_message": {
+        "working": [
+          {
+            "css": "[class*=\"bg-g-send-msg-bubble\"]",
+            "count": 2
+          }
+        ],
+        "broken": [
+          {
+            "css": "[data-testid=\"send_message\"]",
+            "count": 0
+          },
+          {
+            "css": "[class*=\"send-message\"]",
+            "count": 0
+          }
+        ],
+        "status": "degraded"
+      },
+      "assistant_message": {
+        "working": [
+          {
+            "css": ".md-box-root",
+            "count": 2
+          },
+          {
+            "css": ".container-h3Yzeb",
+            "count": 2
+          }
+        ],
+        "broken": [
+          {
+            "css": ".flow-markdown-body",
+            "count": 0
+          },
+          {
+            "css": "[data-testid=\"receive_message\"]",
+            "count": 0
+          },
+          {
+            "css": "[class*=\"receive-message\"]",
+            "count": 0
+          }
+        ],
+        "status": "degraded"
+      },
+      "message_text": {
+        "working": [
+          {
+            "css": ".md-box-root",
+            "count": 2
+          }
+        ],
+        "broken": [
+          {
+            "css": "[data-testid=\"message_text_content\"]",
+            "count": 0
+          },
+          {
+            "css": "[data-testid=\"message_content\"]",
+            "count": 0
+          },
+          {
+            "css": ".flow-markdown-body",
+            "count": 0
+          }
+        ],
+        "status": "degraded"
+      },
+      "composer_textarea": {
+        "working": [],
+        "broken": [
+          {
+            "css": "textarea[data-testid=\"chat_input_input\"]",
+            "count": 0
+          },
+          {
+            "css": "textarea[placeholder*=\"发消息\"]",
+            "count": 0
+          },
+          {
+            "css": "[contenteditable=\"true\"]",
+            "count": 0
+          },
+          {
+            "css": "textarea",
+            "count": 0
+          }
+        ],
+        "status": "broken"
+      },
+      "send_button": {
+        "working": [],
+        "broken": [
+          {
+            "css": "button#flow-end-msg-send",
+            "count": 0
+          },
+          {
+            "css": "button[class*=\"bg-dbx-text-highlight\"]",
+            "count": 0
+          },
+          {
+            "css": "button[type=\"submit\"]",
+            "count": 0
+          }
+        ],
+        "status": "broken"
+      },
+      "conversation_link": {
+        "working": [],
+        "broken": [
+          {
+            "css": "a[href*=\"/chat/\"]",
+            "count": 0
+          }
+        ],
+        "status": "broken"
+      },
+      "captcha_indicator": {
+        "working": [],
+        "broken": [
+          {
+            "css": "iframe[src*=\"captcha\"]",
+            "count": 0
+          },
+          {
+            "css": "iframe[src*=\"verify\"]",
+            "count": 0
+          },
+          {
+            "css": "input[placeholder*=\"验证码\"]",
+            "count": 0
+          }
+        ],
+        "status": "broken"
+      },
+      "meeting_card": {
+        "working": [],
+        "broken": [
+          {
+            "css": "[data-testid=\"meeting-minutes-card\"]",
+            "count": 0
+          }
+        ],
+        "status": "broken"
+      }
+    }
+  },
+  "verification": {
+    "detected": false,
+    "hasVerifyFrame": false,
+    "hasVerifyPhrase": false,
+    "modalText": ""
+  }
+}

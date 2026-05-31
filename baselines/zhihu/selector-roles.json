@@ -1,0 +1,604 @@
+{
+  "schema_version": 2,
+  "site": "zhihu",
+  "updated": "2026-05-30T09:37:16.051Z",
+  "source": {
+    "adapter_path": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/zhihu/",
+    "source_files": [
+      "download.js",
+      "search.js",
+      "hot.js",
+      "answer-detail.js",
+      "comment.js",
+      "answer.js",
+      "question.js",
+      "recommend.js"
+    ],
+    "extraction_method": "dom-heal onboard v2 + live inspection",
+    "analysis_hints": {
+      "button_scope_selector": ".Topstory",
+      "button_css_selectors": [
+        "button",
+        ".Button",
+        ".VoteButton"
+      ],
+      "exclude_button_patterns": [
+        "取消",
+        "Cancel",
+        "关闭",
+        "Close"
+      ],
+      "content_selectors": [
+        ".RichText",
+        ".Post-RichTextContainer",
+        ".ArticleContent"
+      ],
+      "verification_phrases": [
+        "验证码",
+        "Captcha",
+        "请完成安全验证",
+        "检测到疑似爬虫"
+      ]
+    },
+    "page_topology": {
+      "note": "zhihu has 2 page states: homepage (/) and article/answer detail (/question/:id/answer/:id or /p/:id). article_title, article_time, and article_content roles require the detail page for full verification.",
+      "states": {
+        "homepage": {
+          "url": "https://www.zhihu.com",
+          "roles": [
+            "search_input",
+            "search_button",
+            "article_author",
+            "feed_container",
+            "feed_item",
+            "vote_button",
+            "login_indicator",
+            "write_area",
+            "sidebar_nav",
+            "article_author"
+          ],
+          "note": "Search, feed, buttons, author names all present."
+        },
+        "article_detail": {
+          "url": "https://www.zhihu.com/question/:id or https://zhuanlan.zhihu.com/p/:id",
+          "roles": [
+            "article_title",
+            "article_time",
+            "article_content"
+          ],
+          "note": "Download.js selectors. Requires valid article/answer page — anti-bot may block automation."
+        }
+      }
+    }
+  },
+  "roles": {
+    "search_input": {
+      "category": "input",
+      "description": "首页顶部搜索输入框",
+      "selectors": [
+        {
+          "css": ".Input",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "live inspection",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Confirmed working on zhihu.com homepage (live check)."
+            }
+          ]
+        },
+        {
+          "css": "input[type=\"text\"]",
+          "type": "tag",
+          "priority": 2,
+          "stability": "low",
+          "source": {
+            "file": "live inspection",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Confirmed working on zhihu.com homepage (live check)."
+            }
+          ]
+        }
+      ]
+    },
+    "search_button": {
+      "category": "button",
+      "description": "搜索提交按钮",
+      "selectors": [
+        {
+          "css": ".SearchBar-searchButton",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "live inspection",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Confirmed working on zhihu.com homepage (live check)."
+            }
+          ]
+        },
+        {
+          "css": ".SearchBar button",
+          "type": "compound",
+          "priority": 2,
+          "stability": "medium",
+          "source": {
+            "file": "live inspection",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Confirmed working on zhihu.com homepage (live check)."
+            }
+          ]
+        }
+      ]
+    },
+    "article_title": {
+      "category": "content",
+      "description": "文章/回答标题（download.js 用于抓取页面）",
+      "selectors": [
+        {
+          "css": ".Post-Title",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "download.js",
+            "line": 39
+          },
+          "status": "broken",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "broken",
+              "note": "Article-detail-page selector — not present on zhihu.com homepage. Verify on article/answer page."
+            }
+          ]
+        },
+        {
+          "css": "h1.ContentItem-title",
+          "type": "compound",
+          "priority": 2,
+          "stability": "medium",
+          "source": {
+            "file": "download.js",
+            "line": 39
+          },
+          "status": "broken",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "broken",
+              "note": "Article-detail-page selector — not present on zhihu.com homepage. Verify on article/answer page."
+            }
+          ]
+        },
+        {
+          "css": ".ArticleTitle",
+          "type": "class-exact",
+          "priority": 3,
+          "stability": "medium",
+          "source": {
+            "file": "download.js",
+            "line": 39
+          },
+          "status": "broken",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "broken",
+              "note": "Article-detail-page selector — not present on zhihu.com homepage. Verify on article/answer page."
+            }
+          ]
+        }
+      ]
+    },
+    "article_author": {
+      "category": "content",
+      "description": "文章/回答作者名称（download.js 用于抓取页面）",
+      "selectors": [
+        {
+          "css": ".AuthorInfo-name",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "download.js",
+            "line": 43
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Confirmed working on zhihu.com homepage (live check)."
+            }
+          ]
+        },
+        {
+          "css": ".UserLink-link",
+          "type": "class-exact",
+          "priority": 2,
+          "stability": "medium",
+          "source": {
+            "file": "download.js",
+            "line": 43
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Confirmed working on zhihu.com homepage (live check)."
+            }
+          ]
+        }
+      ]
+    },
+    "article_time": {
+      "category": "content",
+      "description": "文章/回答发布时间（download.js 用于抓取页面）",
+      "selectors": [
+        {
+          "css": ".ContentItem-time",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "download.js",
+            "line": 47
+          },
+          "status": "broken",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "broken",
+              "note": "Article-detail-page selector — not present on zhihu.com homepage. Verify on article/answer page."
+            }
+          ]
+        },
+        {
+          "css": ".Post-Time",
+          "type": "class-exact",
+          "priority": 2,
+          "stability": "medium",
+          "source": {
+            "file": "download.js",
+            "line": 47
+          },
+          "status": "broken",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "broken",
+              "note": "Article-detail-page selector — not present on zhihu.com homepage. Verify on article/answer page."
+            }
+          ]
+        }
+      ]
+    },
+    "article_content": {
+      "category": "content",
+      "description": "文章/回答正文容器（download.js 用于抓取页面）",
+      "selectors": [
+        {
+          "css": ".Post-RichTextContainer",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "download.js",
+            "line": 51
+          },
+          "status": "broken",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "broken",
+              "note": "Article-detail-page selector — not present on zhihu.com homepage. Verify on article/answer page."
+            }
+          ]
+        },
+        {
+          "css": ".RichText",
+          "type": "class-exact",
+          "priority": 2,
+          "stability": "medium",
+          "source": {
+            "file": "download.js",
+            "line": 51
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Confirmed working on zhihu.com homepage (live check)."
+            }
+          ]
+        },
+        {
+          "css": ".ArticleContent",
+          "type": "class-exact",
+          "priority": 3,
+          "stability": "medium",
+          "source": {
+            "file": "download.js",
+            "line": 51
+          },
+          "status": "broken",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "broken",
+              "note": "Article-detail-page selector — not present on zhihu.com homepage. Verify on article/answer page."
+            }
+          ]
+        }
+      ]
+    },
+    "feed_container": {
+      "category": "container",
+      "description": "首页推荐信息流容器",
+      "selectors": [
+        {
+          "css": ".Topstory",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "live inspection",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Confirmed working on zhihu.com homepage (live check)."
+            }
+          ]
+        },
+        {
+          "css": ".Topstory-container",
+          "type": "class-exact",
+          "priority": 2,
+          "stability": "medium",
+          "source": {
+            "file": "live inspection",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Confirmed working on zhihu.com homepage (live check)."
+            }
+          ]
+        }
+      ]
+    },
+    "feed_item": {
+      "category": "container",
+      "description": "信息流中的单条内容卡片",
+      "selectors": [
+        {
+          "css": ".ContentItem",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "live inspection",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Confirmed working on zhihu.com homepage (live check)."
+            }
+          ]
+        },
+        {
+          "css": ".AnswerItem",
+          "type": "class-exact",
+          "priority": 2,
+          "stability": "medium",
+          "source": {
+            "file": "live inspection",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Confirmed working on zhihu.com homepage (live check)."
+            }
+          ]
+        },
+        {
+          "css": ".TopstoryItem",
+          "type": "class-exact",
+          "priority": 3,
+          "stability": "low",
+          "source": {
+            "file": "live inspection",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Confirmed working on zhihu.com homepage (live check)."
+            }
+          ]
+        }
+      ]
+    },
+    "vote_button": {
+      "category": "button",
+      "description": "赞同/反对投票按钮",
+      "selectors": [
+        {
+          "css": ".VoteButton",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "live inspection",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Confirmed working on zhihu.com homepage (live check)."
+            }
+          ]
+        }
+      ]
+    },
+    "login_indicator": {
+      "category": "indicator",
+      "description": "用户登录状态指示器（头像入口）",
+      "selectors": [
+        {
+          "css": ".AppHeader-profileEntry",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "live inspection",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Confirmed working on zhihu.com homepage (live check)."
+            }
+          ]
+        },
+        {
+          "css": "header img[alt*=\"主页\"]",
+          "type": "compound",
+          "priority": 2,
+          "stability": "low",
+          "source": {
+            "file": "live inspection",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Confirmed working on zhihu.com homepage (live check)."
+            }
+          ]
+        }
+      ]
+    },
+    "write_area": {
+      "category": "input",
+      "description": "写回答/发文章的编辑区域",
+      "selectors": [
+        {
+          "css": ".WriteArea",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "live inspection",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Confirmed working on zhihu.com homepage (live check)."
+            }
+          ]
+        },
+        {
+          "css": ".Editable-content",
+          "type": "class-exact",
+          "priority": 2,
+          "stability": "low",
+          "source": {
+            "file": "live inspection",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Confirmed working on zhihu.com homepage (live check)."
+            }
+          ]
+        }
+      ]
+    },
+    "sidebar_nav": {
+      "category": "container",
+      "description": "左侧导航栏",
+      "selectors": [
+        {
+          "css": ".ListShortcut",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "live inspection",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Confirmed working on zhihu.com homepage (live check)."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "snapshots": {
+    "latest": "2026-05-30T09-37-16-050Z-0001.json",
+    "history": [
+      "2026-05-30T09-37-16-050Z-0001.json"
+    ]
+  }
+}

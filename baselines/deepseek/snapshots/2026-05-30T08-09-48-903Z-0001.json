@@ -1,0 +1,757 @@
+{
+  "candidates": {
+    "text_inputs": [
+      {
+        "class": "_27c9245 ds-scroll-area ds-scroll-area--show-on-focus-within d96f2d2a",
+        "depth": 13,
+        "id": null,
+        "placeholder": "给 DeepSeek 发送消息 ",
+        "tag": "TEXTAREA",
+        "textLength": 0,
+        "visible": true
+      }
+    ],
+    "buttons": [
+      {
+        "ariaLabel": "",
+        "class": "_4f3769f ds-icon-button ds-icon-button--l ds-icon-button--sizing-container",
+        "depth": 8,
+        "disabled": false,
+        "hasSvg": true,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "ds-icon-button__hover-bg",
+        "depth": 9,
+        "disabled": false,
+        "hasSvg": false,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "_4f3769f ds-icon-button ds-icon-button--l ds-icon-button--sizing-container",
+        "depth": 8,
+        "disabled": false,
+        "hasSvg": true,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "ds-icon-button__hover-bg",
+        "depth": 9,
+        "disabled": false,
+        "hasSvg": false,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "_4f3769f ds-icon-button ds-icon-button--l ds-icon-button--sizing-container",
+        "depth": 8,
+        "disabled": false,
+        "hasSvg": true,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "ds-icon-button__hover-bg",
+        "depth": 9,
+        "disabled": false,
+        "hasSvg": false,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "d05a0287 ds-icon-button ds-icon-button--l ds-icon-button--sizing-icon",
+        "depth": 9,
+        "disabled": false,
+        "hasSvg": true,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": false
+      },
+      {
+        "ariaLabel": "",
+        "class": "ds-icon-button__hover-bg",
+        "depth": 10,
+        "disabled": false,
+        "hasSvg": false,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": false
+      },
+      {
+        "ariaLabel": "",
+        "class": "_7d1f5e2 ds-icon-button ds-icon-button--l ds-icon-button--sizing-icon",
+        "depth": 9,
+        "disabled": false,
+        "hasSvg": true,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": false
+      },
+      {
+        "ariaLabel": "",
+        "class": "ds-icon-button__hover-bg",
+        "depth": 10,
+        "disabled": false,
+        "hasSvg": false,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": false
+      },
+      {
+        "ariaLabel": "",
+        "class": "_2090548 ds-icon-button ds-icon-button--m ds-icon-button--sizing-container",
+        "depth": 13,
+        "disabled": false,
+        "hasSvg": true,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": false
+      },
+      {
+        "ariaLabel": "",
+        "class": "ds-icon-button__hover-bg",
+        "depth": 14,
+        "disabled": false,
+        "hasSvg": false,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": false
+      },
+      {
+        "ariaLabel": "",
+        "class": "ds-icon-button ds-icon-button--xl ds-icon-button--sizing-container",
+        "depth": 9,
+        "disabled": false,
+        "hasSvg": true,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": false
+      },
+      {
+        "ariaLabel": "",
+        "class": "ds-icon-button__hover-bg",
+        "depth": 10,
+        "disabled": false,
+        "hasSvg": false,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": false
+      },
+      {
+        "ariaLabel": "",
+        "class": "ds-icon-button ds-icon-button--xl ds-icon-button--sizing-container",
+        "depth": 9,
+        "disabled": false,
+        "hasSvg": true,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": false
+      },
+      {
+        "ariaLabel": "",
+        "class": "ds-icon-button__hover-bg",
+        "depth": 10,
+        "disabled": false,
+        "hasSvg": false,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": false
+      },
+      {
+        "ariaLabel": "",
+        "class": "_57370c5 _5dedc1e ds-icon-button ds-icon-button--l ds-icon-button--sizing-container",
+        "depth": 8,
+        "disabled": false,
+        "hasSvg": true,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "ds-icon-button__hover-bg",
+        "depth": 9,
+        "disabled": false,
+        "hasSvg": false,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "db183363 ds-icon-button ds-icon-button--m ds-icon-button--sizing-container",
+        "depth": 14,
+        "disabled": false,
+        "hasSvg": true,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "ds-icon-button__hover-bg",
+        "depth": 15,
+        "disabled": false,
+        "hasSvg": false,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "d4910adc ds-icon-button ds-icon-button--m ds-icon-button--sizing-container",
+        "depth": 14,
+        "disabled": false,
+        "hasSvg": true,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "ds-icon-button__hover-bg",
+        "depth": 15,
+        "disabled": false,
+        "hasSvg": false,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "db183363 ds-icon-button ds-icon-button--m ds-icon-button--sizing-container",
+        "depth": 13,
+        "disabled": false,
+        "hasSvg": true,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "ds-icon-button__hover-bg",
+        "depth": 14,
+        "disabled": false,
+        "hasSvg": false,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "db183363 ds-icon-button ds-icon-button--m ds-icon-button--sizing-container",
+        "depth": 13,
+        "disabled": false,
+        "hasSvg": true,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "ds-icon-button__hover-bg",
+        "depth": 14,
+        "disabled": false,
+        "hasSvg": false,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "db183363 ds-icon-button ds-icon-button--m ds-icon-button--sizing-container",
+        "depth": 13,
+        "disabled": false,
+        "hasSvg": true,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "ds-icon-button__hover-bg",
+        "depth": 14,
+        "disabled": false,
+        "hasSvg": false,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "db183363 ds-icon-button ds-icon-button--m ds-icon-button--sizing-container",
+        "depth": 13,
+        "disabled": false,
+        "hasSvg": true,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      },
+      {
+        "ariaLabel": "",
+        "class": "ds-icon-button__hover-bg",
+        "depth": 14,
+        "disabled": false,
+        "hasSvg": false,
+        "id": null,
+        "isToggle": false,
+        "tag": "DIV",
+        "text": "",
+        "visible": true
+      }
+    ],
+    "scroll_containers": [],
+    "message_blocks": [
+      {
+        "childCount": 1,
+        "class": "d29f3d7d ds-message _63c77b1",
+        "classCount": 3,
+        "depth": 11,
+        "hasMarkdown": false,
+        "hasThink": false,
+        "role": "User",
+        "textLength": 4,
+        "textPreview": "test",
+        "visible": true
+      },
+      {
+        "childCount": 2,
+        "class": "ds-message _63c77b1",
+        "classCount": 2,
+        "depth": 11,
+        "hasMarkdown": true,
+        "hasThink": true,
+        "role": "Assistant",
+        "textLength": 81,
+        "textPreview": "已思考（用时 1 秒）\n\n我们只需要回复\"test\"吗？用户只是发了一个\"test\"，可能是测试。助手可以简单回复确认。\n\n收到，测试正常。请问有什么可以帮您的？",
+        "visible": true
+      }
+    ],
+    "links": [
+      {
+        "depth": 11,
+        "href": "/a/chat/s/21eb9d1a-2b51-43ec-9c3b-87b606597dbc",
+        "text": "测试回复",
+        "visible": false
+      }
+    ]
+  },
+  "health": {
+    "role_checks": {
+      "composer_textarea": {
+        "broken": [
+          {
+            "count": 0,
+            "css": "[contenteditable=\"true\"]"
+          }
+        ],
+        "status": "degraded",
+        "working": [
+          {
+            "count": 1,
+            "css": "textarea[placeholder*=\"DeepSeek\"]"
+          },
+          {
+            "count": 1,
+            "css": "textarea"
+          }
+        ]
+      },
+      "conversation_link": {
+        "broken": [],
+        "status": "ok",
+        "working": [
+          {
+            "count": 1,
+            "css": "a[href*=\"/a/chat/s/\"]"
+          }
+        ]
+      },
+      "feature_toggle": {
+        "broken": [],
+        "status": "ok",
+        "working": [
+          {
+            "count": 2,
+            "css": ".ds-toggle-button"
+          },
+          {
+            "count": 2,
+            "css": ".ds-toggle-button--selected"
+          }
+        ]
+      },
+      "login_indicator": {
+        "broken": [],
+        "status": "ok",
+        "working": [
+          {
+            "count": 1,
+            "css": "img[src*=\"user-avatar\"]"
+          }
+        ]
+      },
+      "markdown_content": {
+        "broken": [],
+        "status": "ok",
+        "working": [
+          {
+            "count": 2,
+            "css": ".ds-markdown"
+          },
+          {
+            "count": 2,
+            "css": ".ds-markdown-paragraph"
+          }
+        ]
+      },
+      "message_item": {
+        "broken": [],
+        "status": "ok",
+        "working": [
+          {
+            "count": 2,
+            "css": ".ds-message"
+          }
+        ]
+      },
+      "model_radio": {
+        "broken": [
+          {
+            "count": 0,
+            "css": "div[role=\"radio\"]"
+          }
+        ],
+        "status": "broken",
+        "working": []
+      },
+      "send_button": {
+        "broken": [],
+        "status": "ok",
+        "working": [
+          {
+            "count": 18,
+            "css": "div[role=\"button\"]:not(.ds-toggle-button)"
+          }
+        ]
+      },
+      "sidebar_toggle": {
+        "broken": [],
+        "status": "ok",
+        "working": [
+          {
+            "count": 19,
+            "css": "div[tabindex=\"0\"][role=\"button\"]"
+          }
+        ]
+      },
+      "thinking_container": {
+        "broken": [],
+        "status": "ok",
+        "working": [
+          {
+            "count": 1,
+            "css": ".ds-think-content"
+          },
+          {
+            "count": 1,
+            "css": "[class*=\"think\"]"
+          }
+        ]
+      },
+      "thinking_header": {
+        "broken": [
+          {
+            "count": 0,
+            "css": "[class*='think'] ~ *"
+          }
+        ],
+        "status": "degraded",
+        "working": [
+          {
+            "count": 1,
+            "css": ".ds-message (text match for thinking header)"
+          }
+        ]
+      }
+    }
+  },
+  "layout": {
+    "mainContainers": [
+      {
+        "childCount": 1,
+        "class": "ds-markdown ds-assistant-message-main-content",
+        "id": null,
+        "tag": "DIV",
+        "visible": true
+      }
+    ],
+    "scrollableContainers": []
+  },
+  "selectors": {
+    "class_prefixes": {
+      "_020ab5b": 1,
+      "_0652043": 1,
+      "_0a3d93b": 1,
+      "_0bbda35": 1,
+      "_0fcaa63": 1,
+      "_11d6b3a": 1,
+      "_196bcac": 1,
+      "_19943ce": 1,
+      "_1aa2651": 1,
+      "_1c42ad7": 1,
+      "_1d72f01": 1,
+      "_2090548": 1,
+      "_23e1c55": 1,
+      "_245c867": 1,
+      "_24fad49": 1,
+      "_254829d": 1,
+      "_262baab": 1,
+      "_27c9245": 1,
+      "_2afd28d": 1,
+      "_2bd7b35": 1,
+      "_2be88ba": 1,
+      "_2c189bc": 1,
+      "_3098d02": 1,
+      "_348bebe": 1,
+      "_34a54ec": 1,
+      "_3586175": 1,
+      "_39cc453": 1,
+      "_3d616d3": 1,
+      "_425ea0b": 1,
+      "_43c05b5": 1,
+      "_46a12ab": 2,
+      "_4cbcd96": 1,
+      "_4d41763": 1,
+      "_4f3769f": 3,
+      "_4f9bf79": 1,
+      "_5255ff8": 1,
+      "_52c986b": 1,
+      "_546d736": 1,
+      "_54866f7": 1,
+      "_57370c5": 1,
+      "_58b31c9": 1,
+      "_5a20a69": 1,
+      "_5a50d80": 1,
+      "_5a8ac7a": 1,
+      "_5ab5d64": 1,
+      "_5c2e5a9": 4,
+      "_5dedc1e": 1,
+      "_63c77b1": 2,
+      "_68953bc": 4,
+      "_6acebc2": 1,
+      "_6d215eb": 1,
+      "_6dbc175": 2,
+      "_6f2c522": 1,
+      "_70b689f": 1,
+      "_74c0879": 1,
+      "_765a5cd": 1,
+      "_767406f": 1,
+      "_7780f2e": 1,
+      "_77cdc67": 1,
+      "_77cefa5": 1,
+      "_78e0558": 1,
+      "_7d10bb1": 1,
+      "_7d1f5e2": 1,
+      "_871cbca": 1,
+      "_8a693f3": 1,
+      "_8f7678d": 1,
+      "_965abe9": 1,
+      "_9663006": 1,
+      "_970ac5e": 1,
+      "_9986c0c": 1,
+      "_9b52f6c": 1,
+      "_9d8da05": 1,
+      "_9ecc93a": 1,
+      "_9fcbeda": 1,
+      "a02af2e6": 1,
+      "a084f19e": 1,
+      "a1ac5b47": 2,
+      "a2f3d50e": 1,
+      "a510c7ce": 1,
+      "aaff8b8f": 1,
+      "afa34042": 1,
+      "automa-e": 1,
+      "b13855df": 1,
+      "b64fb9ae": 1,
+      "b8812f16": 1,
+      "bd74640a": 1,
+      "bf38813a": 1,
+      "c03d486a": 2,
+      "c08e6e93": 1,
+      "c2b72bb8": 1,
+      "c3ecdb44": 1,
+      "c99b79f8": 1,
+      "ca6d4be1": 1,
+      "cb86951c": 1,
+      "cddfb2ed": 1,
+      "d00ed9c9": 1,
+      "d05a0287": 1,
+      "d29f3d7d": 1,
+      "d4910adc": 1,
+      "d72636e2": 1,
+      "d7dc56a8": 1,
+      "d96f2d2a": 1,
+      "dark": 1,
+      "db183363": 6,
+      "dc04ec1d": 1,
+      "ddd26891": 1,
+      "de3d058c": 1,
+      "ds-assis": 1,
+      "ds-atom-": 4,
+      "ds-flex": 3,
+      "ds-focus": 23,
+      "ds-icon": 29,
+      "ds-icon-": 73,
+      "ds-markd": 4,
+      "ds-messa": 2,
+      "ds-notif": 3,
+      "ds-scrol": 22,
+      "ds-skele": 12,
+      "ds-theme": 4,
+      "ds-think": 1,
+      "ds-toggl": 6,
+      "ds-virtu": 4,
+      "e066abb8": 1,
+      "e0a1edb7": 1,
+      "e1675d8b": 1,
+      "e37a04e4": 1,
+      "e5bf614e": 1,
+      "ec4f5d61": 1,
+      "ede5bc47": 1,
+      "f02f0e25": 1,
+      "f3d18f6a": 1,
+      "f79352dc": 2,
+      "f8d1e4c0": 1,
+      "fbb737a4": 1,
+      "fdf01f38": 1,
+      "focused": 1,
+      "notransl": 1,
+      "the-head": 2,
+      "zh_CN": 1
+    },
+    "data_attributes": [
+      "data-ds-dark-theme",
+      "data-smcp",
+      "data-virtual-list-item-key",
+      "data-webpack"
+    ],
+    "data_test_ids": {},
+    "ds_classes": [
+      "ds-assistant-message-main-content",
+      "ds-atom-button",
+      "ds-atom-button__icon",
+      "ds-flex",
+      "ds-focus-ring",
+      "ds-icon",
+      "ds-icon-button",
+      "ds-icon-button--disabled",
+      "ds-icon-button--l",
+      "ds-icon-button--m",
+      "ds-icon-button--sizing-container",
+      "ds-icon-button--sizing-icon",
+      "ds-icon-button--xl",
+      "ds-icon-button__hover-bg",
+      "ds-markdown",
+      "ds-markdown-paragraph",
+      "ds-message",
+      "ds-notification-container",
+      "ds-notification-container--top-right",
+      "ds-scroll-area",
+      "ds-scroll-area--show-on-focus-within",
+      "ds-scroll-area__gutters",
+      "ds-scroll-area__horizontal-bar",
+      "ds-scroll-area__horizontal-gutter",
+      "ds-scroll-area__vertical-bar",
+      "ds-scroll-area__vertical-gutter",
+      "ds-skeleton",
+      "ds-skeleton--m",
+      "ds-skeleton--text",
+      "ds-theme",
+      "ds-think-content",
+      "ds-toggle-button",
+      "ds-toggle-button--md",
+      "ds-toggle-button--selected",
+      "ds-virtual-list",
+      "ds-virtual-list--printable",
+      "ds-virtual-list-items",
+      "ds-virtual-list-visible-items"
+    ],
+    "id_selectors": {}
+  },
+  "timestamp": "2026-05-30T08:09:48.605Z",
+  "url": "https://chat.deepseek.com/a/chat/s/21eb9d1a-2b51-43ec-9c3b-87b606597dbc"
+}

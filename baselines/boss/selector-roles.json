@@ -1,0 +1,199 @@
+{
+  "schema_version": 2,
+  "site": "boss",
+  "updated": "2026-05-25T00:00:00Z",
+  "source": {
+    "adapter_path": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/boss/",
+    "source_files": [
+      "utils.js"
+    ],
+    "extraction_method": "manual",
+    "extraction_date": "2026-05-25T00:00:00Z",
+    "analysis_hints": {
+      "link_pattern": null,
+      "message_item_selectors": [],
+      "message_role_heuristic": null,
+      "button_scope_selector": ".conversation-editor, .conversation-operate, .submit-content",
+      "button_css_selectors": [".conversation-editor .submit", ".submit-content .submit", ".conversation-operate .submit", "button"],
+      "send_button_patterns": [],
+      "exclude_button_patterns": [],
+      "content_selectors": [],
+      "verification_phrases": [],
+      "extra_selectors": []
+    }
+  },
+  "roles": {
+    "message_input": {
+      "description": "Chat message input field. BOSS uses contenteditable divs scoped to chat editor containers.",
+      "category": "input",
+      "selectors": [
+        {
+          "css": ".chat-editor [contenteditable=\"true\"]",
+          "type": "descendant",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/boss/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": ".chat-input [contenteditable=\"true\"]",
+          "type": "descendant",
+          "priority": 2,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/boss/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": ".message-editor [contenteditable=\"true\"]",
+          "type": "descendant",
+          "priority": 3,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/boss/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": ".chat-conversation [contenteditable=\"true\"]",
+          "type": "descendant",
+          "priority": 4,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/boss/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": "[contenteditable=\"true\"]",
+          "type": "attribute",
+          "priority": 5,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/boss/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": "textarea",
+          "type": "tag",
+          "priority": 6,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/boss/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    },
+    "send_button": {
+      "description": "Send button in chat conversation editor. Falls back to Enter key if no button found.",
+      "category": "button",
+      "selectors": [
+        {
+          "css": ".conversation-editor .submit",
+          "type": "descendant",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/boss/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": ".submit-content .submit",
+          "type": "descendant",
+          "priority": 2,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/boss/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": ".conversation-operate .submit",
+          "type": "descendant",
+          "priority": 3,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/boss/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    },
+    "chat_list_item": {
+      "description": "Contact/chat list items in the sidebar. Identified by geek-item class or id pattern matching.",
+      "category": "container",
+      "selectors": [
+        {
+          "css": ".geek-item",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/boss/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": "[id^=\"_\"]",
+          "type": "attribute",
+          "priority": 2,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/boss/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    },
+    "login_indicator": {
+      "description": "Cookie/auth state indicator. BOSS relies on cookie-based auth rather than visible UI elements.",
+      "category": "indicator",
+      "selectors": [
+        {
+          "css": ".geek-item",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/boss/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    }
+  },
+  "snapshots": {
+    "latest": null,
+    "history": []
+  }
+}

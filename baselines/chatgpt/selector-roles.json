@@ -1,0 +1,307 @@
+{
+  "schema_version": 2,
+  "site": "chatgpt",
+  "updated": "2026-05-25T00:00:00Z",
+  "source": {
+    "adapter_path": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/",
+    "source_files": [
+      "utils.js"
+    ],
+    "extraction_method": "manual",
+    "extraction_date": "2026-05-25T00:00:00Z",
+    "analysis_hints": {
+      "link_pattern": "a[href*=\"/c/\"]",
+      "link_id_regex": "/\\/c\\/([A-Za-z0-9_-]{8,})/",
+      "message_item_selectors": ["[data-message-author-role]", "article[data-testid*=\"conversation-turn\"]"],
+      "message_role_heuristic": null,
+      "button_scope_selector": "form, [role=\"form\"], [class*=\"composer\"]",
+      "send_button_patterns": ["Send prompt", "Send message", "Send", "发送提示"],
+      "exclude_button_patterns": ["Close sidebar", "关闭边栏", "Open sidebar", "打开边栏", "Stop generating"],
+      "content_selectors": [".markdown", "[data-message-author-role] .markdown"],
+      "verification_phrases": [],
+      "extra_selectors": []
+    }
+  },
+  "roles": {
+    "message_item": {
+      "description": "All message bubbles (user and assistant). ChatGPT uses data-message-author-role attribute for role detection and data-testid for conversation turns.",
+      "category": "container",
+      "selectors": [
+        {
+          "css": "[data-message-author-role]",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": "article[data-testid*=\"conversation-turn\"]",
+          "type": "attribute",
+          "priority": 2,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    },
+    "composer_textarea": {
+      "description": "Message input textarea. ChatGPT uses a rich text editor with contenteditable.",
+      "category": "input",
+      "selectors": [
+        {
+          "css": "#prompt-textarea",
+          "type": "id",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": "[data-testid=\"prompt-textarea\"]",
+          "type": "attribute",
+          "priority": 2,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": "[contenteditable=\"true\"][role=\"textbox\"]",
+          "type": "attribute",
+          "priority": 3,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": "[aria-label=\"Chat with ChatGPT\"]",
+          "type": "attribute",
+          "priority": 4,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": "[aria-label=\"与 ChatGPT 聊天\"]",
+          "type": "attribute",
+          "priority": 5,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": "[placeholder=\"Ask anything\"]",
+          "type": "attribute",
+          "priority": 6,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": "[placeholder=\"有问题，尽管问\"]",
+          "type": "attribute",
+          "priority": 7,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    },
+    "send_button": {
+      "description": "Send button. ChatGPT uses data-testid on the submit button.",
+      "category": "button",
+      "selectors": [
+        {
+          "css": "button[data-testid=\"send-button\"]",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": "#composer-submit-button",
+          "type": "id",
+          "priority": 2,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    },
+    "conversation_link": {
+      "description": "Sidebar history conversation links. ChatGPT uses /c/<id> URL pattern.",
+      "category": "link",
+      "selectors": [
+        {
+          "css": "a[href*=\"/c/\"]",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    },
+    "login_indicator": {
+      "description": "User profile button indicating authenticated state",
+      "category": "indicator",
+      "selectors": [
+        {
+          "css": "[data-testid=\"profile-button\"]",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": "button[id*=\"headlessui-menu-button\"]",
+          "type": "attribute",
+          "priority": 2,
+          "stability": "low",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    },
+    "sidebar_toggle": {
+      "description": "Sidebar open/close toggle button for conversation history",
+      "category": "container",
+      "selectors": [
+        {
+          "css": "button[aria-label*=\"Close sidebar\"], button[aria-label*=\"关闭边栏\"]",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": "button[aria-label*=\"Open sidebar\"], button[aria-label*=\"打开边栏\"]",
+          "type": "attribute",
+          "priority": 2,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    },
+    "markdown_content": {
+      "description": "Markdown-rendered message content within message bubbles",
+      "category": "content",
+      "selectors": [
+        {
+          "css": "[data-message-author-role] .markdown",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": ".markdown",
+          "type": "class-exact",
+          "priority": 2,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    },
+    "generating_indicator": {
+      "description": "Stop/Thinking button indicating response generation in progress",
+      "category": "indicator",
+      "selectors": [
+        {
+          "css": "button[aria-label=\"Stop generating\"], button[aria-label*=\"Thinking\"]",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/chatgpt/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    }
+  },
+  "snapshots": {
+    "latest": null,
+    "history": []
+  }
+}

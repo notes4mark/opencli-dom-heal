@@ -1,0 +1,272 @@
+{
+  "schema_version": 2,
+  "site": "claude",
+  "updated": "2026-05-25T00:00:00Z",
+  "source": {
+    "adapter_path": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/claude/",
+    "source_files": [
+      "utils.js"
+    ],
+    "extraction_method": "manual",
+    "extraction_date": "2026-05-25T00:00:00Z",
+    "analysis_hints": {
+      "link_pattern": "a[href*=\"/chat/\"]",
+      "link_id_regex": "/\\/chat\\/([a-f0-9-]+)/",
+      "message_item_selectors": ["[data-testid=\"user-message\"]", ".font-claude-response"],
+      "message_role_heuristic": null,
+      "button_scope_selector": null,
+      "button_css_selectors": ["button", "[role=\"button\"]"],
+      "send_button_patterns": ["Send Message", "Send message", "Send"],
+      "exclude_button_patterns": [],
+      "content_selectors": [".font-claude-response", "[data-testid=\"user-message\"]"],
+      "verification_phrases": [],
+      "extra_selectors": []
+    }
+  },
+  "roles": {
+    "user_message": {
+      "description": "User message bubbles, identified by data-testid attribute",
+      "category": "container",
+      "selectors": [
+        {
+          "css": "[data-testid=\"user-message\"]",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/claude/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    },
+    "assistant_message": {
+      "description": "AI response message bubbles using font-claude-response class",
+      "category": "container",
+      "selectors": [
+        {
+          "css": ".font-claude-response",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/claude/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    },
+    "composer_textarea": {
+      "description": "Message input textarea. Claude uses a data-testid selector.",
+      "category": "input",
+      "selectors": [
+        {
+          "css": "[data-testid=\"chat-input\"]",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/claude/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    },
+    "send_button": {
+      "description": "Send button with aria-label pattern matching. Falls back to rightmost SVG button in composer.",
+      "category": "button",
+      "selectors": [
+        {
+          "css": "button[aria-label=\"Send Message\"]",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/claude/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": "button[aria-label=\"Send message\"]",
+          "type": "attribute",
+          "priority": 2,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/claude/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": "button[aria-label=\"Send\"]",
+          "type": "attribute",
+          "priority": 3,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/claude/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": "button[aria-label*=\"Send\"]",
+          "type": "attribute",
+          "priority": 4,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/claude/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    },
+    "conversation_link": {
+      "description": "Sidebar history conversation links. Claude uses /chat/<uuid> URL pattern.",
+      "category": "link",
+      "selectors": [
+        {
+          "css": "a[href*=\"/chat/\"]",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/claude/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    },
+    "login_indicator": {
+      "description": "User menu button indicating authenticated state",
+      "category": "indicator",
+      "selectors": [
+        {
+          "css": "[data-testid=\"user-menu-button\"]",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/claude/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    },
+    "model_selector": {
+      "description": "Model selection dropdown trigger and menu items",
+      "category": "interactive",
+      "selectors": [
+        {
+          "css": "[data-testid=\"model-selector-dropdown\"]",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/claude/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": "div[role=\"menuitemradio\"]",
+          "type": "attribute",
+          "priority": 2,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/claude/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        },
+        {
+          "css": "div[role=\"menuitem\"]",
+          "type": "attribute",
+          "priority": 3,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/claude/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    },
+    "file_upload": {
+      "description": "Hidden file input for uploading attachments",
+      "category": "input",
+      "selectors": [
+        {
+          "css": "input[data-testid=\"file-upload\"]",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/claude/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    },
+    "streaming_indicator": {
+      "description": "Attribute indicating Claude is still generating a response",
+      "category": "indicator",
+      "selectors": [
+        {
+          "css": "[data-is-streaming=\"true\"]",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/claude/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    },
+    "file_thumbnail": {
+      "description": "File attachment preview card after successful upload",
+      "category": "indicator",
+      "selectors": [
+        {
+          "css": "[data-testid=\"file-thumbnail\"]",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/claude/utils.js",
+            "extracted": "2026-05-25T00:00:00Z"
+          },
+          "status": "unknown",
+          "history": []
+        }
+      ]
+    }
+  },
+  "snapshots": {
+    "latest": null,
+    "history": []
+  }
+}

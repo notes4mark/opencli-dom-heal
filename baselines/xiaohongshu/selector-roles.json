@@ -1,0 +1,505 @@
+{
+  "schema_version": 2,
+  "site": "xiaohongshu",
+  "updated": "2026-05-30T10:10:31.141Z",
+  "source": {
+    "adapter_path": "~/.npm-global/lib/node_modules/@jackwener/opencli/clis/xiaohongshu/",
+    "source_files": [
+      "search.js",
+      "publish.js",
+      "note-helpers.js",
+      "user-helpers.js",
+      "feed.js"
+    ],
+    "extraction_method": "dom-heal onboard v2 + live inspection",
+    "analysis_hints": {
+      "link_pattern": "a[href*=\"/search_result/\"], a[href*=\"/explore/\"]",
+      "link_exclude_paths": [],
+      "link_id_regex": "/\\/(?:search_result|explore)\\/([a-f0-9]{24})/",
+      "message_item_selectors": [],
+      "message_role_heuristic": null,
+      "button_scope_selector": null,
+      "send_button_patterns": [],
+      "exclude_button_patterns": [],
+      "content_selectors": [
+        ".note-scroller",
+        ".note-text",
+        ".desc"
+      ],
+      "verification_phrases": [
+        "登录后查看搜索结果"
+      ],
+      "extra_selectors": []
+    },
+    "page_topology": {
+      "note": "xiaohongshu has 3 page states: explore feed (/explore), search results (/search_result/...), and creator center (/creator-center). search_result links and publish elements are topology-dependent — they only exist on their respective pages.",
+      "states": {
+        "explore_feed": {
+          "url": "https://www.xiaohongshu.com/explore",
+          "roles": [
+            "search_result_item",
+            "note_link",
+            "note_title",
+            "note_author",
+            "note_likes",
+            "author_profile_link",
+            "login_wall"
+          ],
+          "note": "Default landing page. Uses explore links (not search_result). section.note-item cards present. No data-* attributes. Class prefixes stable and semantic."
+        },
+        "search_results": {
+          "url": "https://www.xiaohongshu.com/search_result/...",
+          "roles": [
+            "search_result_item",
+            "note_link",
+            "note_title",
+            "note_author",
+            "note_likes",
+            "author_profile_link"
+          ],
+          "note": "search_result-specific selectors (a[href*=\"/search_result/\"], section:has(...)) only work here. section.note-item cards also present."
+        },
+        "creator_center": {
+          "url": "https://creator.xiaohongshu.com/publish/...",
+          "roles": [
+            "publish_title_input",
+            "publish_button"
+          ],
+          "note": "Creator center publish page. Uses web components (xhs-publish-btn) with closed shadow root. publish_title_input uses contenteditable div."
+        }
+      }
+    }
+  },
+  "roles": {
+    "search_result_item": {
+      "description": "Individual note card in search/explore feed. Uses section.note-item class or section containing note links.",
+      "category": "container",
+      "selectors": [
+        {
+          "css": "section.note-item",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "search.js",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "30 matches on explore feed. Present on both explore and search results pages."
+            }
+          ]
+        },
+        {
+          "css": "section:has(a[href*=\"/search_result/\"])",
+          "type": "structural",
+          "priority": 2,
+          "stability": "high",
+          "source": {
+            "file": "search.js",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "broken",
+              "note": "Topology-dependent: 0 matches on explore feed, 39 on search results page. Expected BROKEN on explore — not a real breakage."
+            },
+            {
+              "timestamp": "2026-05-30T10:10:31.141Z",
+              "status": "ok",
+              "count": 20
+            }
+          ]
+        },
+        {
+          "css": "section:has(a[href*=\"/explore/\"])",
+          "type": "structural",
+          "priority": 3,
+          "stability": "high",
+          "source": {
+            "file": "search.js",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "30 matches on explore feed. Present on both explore and search results pages."
+            }
+          ]
+        }
+      ]
+    },
+    "note_link": {
+      "description": "Links to note detail pages. Prefer search_result links (preserve xsec_token) over generic explore links.",
+      "category": "link",
+      "selectors": [
+        {
+          "css": "a.cover.mask",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "search.js",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "30 matches on explore feed."
+            }
+          ]
+        },
+        {
+          "css": "a[href*=\"/search_result/\"]",
+          "type": "attribute",
+          "priority": 2,
+          "stability": "high",
+          "source": {
+            "file": "search.js",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "broken",
+              "note": "Topology-dependent: 0 matches on explore feed, 39 on search results page. Expected BROKEN on explore."
+            },
+            {
+              "timestamp": "2026-05-30T10:10:31.141Z",
+              "status": "ok",
+              "count": 39
+            }
+          ]
+        },
+        {
+          "css": "a[href*=\"/explore/\"]",
+          "type": "attribute",
+          "priority": 3,
+          "stability": "high",
+          "source": {
+            "file": "search.js",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "90 matches on explore feed."
+            }
+          ]
+        }
+      ]
+    },
+    "note_title": {
+      "description": "Note title text within a search result card",
+      "category": "content",
+      "selectors": [
+        {
+          "css": ".title",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "search.js",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "33 matches on explore feed."
+            }
+          ]
+        },
+        {
+          "css": ".footer .title span",
+          "type": "descendant",
+          "priority": 2,
+          "stability": "low",
+          "source": {
+            "file": "search.js",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "30 matches on explore feed."
+            }
+          ]
+        }
+      ]
+    },
+    "note_author": {
+      "description": "Author name/nickname link within a note card",
+      "category": "content",
+      "selectors": [
+        {
+          "css": "a.author .name",
+          "type": "descendant",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "search.js",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "30 matches on explore feed."
+            }
+          ]
+        },
+        {
+          "css": ".name",
+          "type": "class-exact",
+          "priority": 2,
+          "stability": "low",
+          "source": {
+            "file": "search.js",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "30 matches on explore feed."
+            }
+          ]
+        }
+      ]
+    },
+    "note_likes": {
+      "description": "Like count displayed on note cards",
+      "category": "content",
+      "selectors": [
+        {
+          "css": ".count",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "low",
+          "source": {
+            "file": "search.js",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "32 matches on explore feed."
+            }
+          ]
+        },
+        {
+          "css": ".like-wrapper .count",
+          "type": "descendant",
+          "priority": 2,
+          "stability": "medium",
+          "source": {
+            "file": "search.js",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "30 matches on explore feed."
+            }
+          ]
+        }
+      ]
+    },
+    "author_profile_link": {
+      "description": "Link to an author's profile page",
+      "category": "link",
+      "selectors": [
+        {
+          "css": "a.author",
+          "type": "class-exact",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "search.js",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "30 matches on explore feed."
+            }
+          ]
+        },
+        {
+          "css": "a[href*=\"/user/profile/\"]",
+          "type": "attribute",
+          "priority": 2,
+          "stability": "high",
+          "source": {
+            "file": "user-helpers.js",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "34 matches on explore feed."
+            }
+          ]
+        }
+      ]
+    },
+    "publish_title_input": {
+      "description": "Title input field in creator center publish page. Topology-dependent: only exists on creator center.",
+      "category": "input",
+      "selectors": [
+        {
+          "css": "[contenteditable=\"true\"][placeholder*=\"标题\"]",
+          "type": "attribute",
+          "priority": 1,
+          "stability": "medium",
+          "source": {
+            "file": "publish.js",
+            "line": 0
+          },
+          "status": "broken",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "broken",
+              "note": "Topology-dependent: only exists on creator center publish page. Not present on explore feed. Expected BROKEN on explore."
+            }
+          ]
+        },
+        {
+          "css": "input[maxlength=\"20\"]",
+          "type": "attribute",
+          "priority": 2,
+          "stability": "medium",
+          "source": {
+            "file": "publish.js",
+            "line": 0
+          },
+          "status": "broken",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "broken",
+              "note": "Topology-dependent: only exists on creator center publish page."
+            }
+          ]
+        },
+        {
+          "css": "input[placeholder*=\"标题\"]",
+          "type": "attribute",
+          "priority": 3,
+          "stability": "medium",
+          "source": {
+            "file": "publish.js",
+            "line": 0
+          },
+          "status": "broken",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "broken",
+              "note": "Topology-dependent: only exists on creator center publish page."
+            }
+          ]
+        },
+        {
+          "css": "input[class*=\"title\"]",
+          "type": "class-substring",
+          "priority": 4,
+          "stability": "low",
+          "source": {
+            "file": "publish.js",
+            "line": 0
+          },
+          "status": "broken",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "broken",
+              "note": "Topology-dependent: only exists on creator center publish page."
+            }
+          ]
+        }
+      ]
+    },
+    "publish_button": {
+      "description": "Publish/save-draft button in creator center. Web component with closed shadow root, requires instance method invocation. Topology-dependent: only exists on creator center.",
+      "category": "button",
+      "selectors": [
+        {
+          "css": "xhs-publish-btn",
+          "type": "tag",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "publish.js",
+            "line": 0
+          },
+          "status": "broken",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "broken",
+              "note": "Topology-dependent: only exists on creator center publish page. Not present on explore feed. Expected BROKEN on explore."
+            }
+          ]
+        }
+      ]
+    },
+    "login_wall": {
+      "description": "Login gate that blocks unauthenticated search access. Adapter checks body text for verification phrases.",
+      "category": "indicator",
+      "selectors": [
+        {
+          "css": "body",
+          "type": "tag",
+          "priority": 1,
+          "stability": "high",
+          "source": {
+            "file": "search.js",
+            "line": 0
+          },
+          "status": "ok",
+          "history": [
+            {
+              "date": "2026-05-30",
+              "status": "ok",
+              "note": "Always present. Adapter uses text content check (verification_phrases) to detect login wall, not selector presence."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "snapshots": {
+    "latest": "2026-05-30T10-10-31-140Z-0001.json",
+    "history": [
+      "2026-05-30T10-10-31-140Z-0001.json"
+    ]
+  }
+}
