@@ -1,5 +1,7 @@
 # DOM Heal — Selector Health & Self-Repair for OpenCLI Browser Adapters
 
+> Part of the [OpenCLI](https://github.com/jackwener/OpenCLI) ecosystem — a browser automation framework that lets AI agents control websites through composable adapters. `opencli <site> <command>` is all an agent needs.
+
 **dom-heal** detects DOM breakage in OpenCLI browser adapters before they fail at runtime, diagnoses broken selectors, and suggests fixes — from automated health checks to algorithmic repair scoring.
 
 It answers three questions for every OpenCLI-covered website:
@@ -33,6 +35,12 @@ Field-tested across Chat AI (doubao, deepseek), social media (xiaohongshu), Q&A 
 ## Quick Start
 
 ```bash
+# Install
+npm install opencli-dom-heal
+# or
+git clone https://github.com/notes4mark/opencli-dom-heal.git
+cd opencli-dom-heal
+
 # 1. Audit all sites (no browser needed)
 node cli.mjs audit
 
