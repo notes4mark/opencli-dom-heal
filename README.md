@@ -30,6 +30,8 @@ Field-tested across Chat AI (doubao, deepseek), social media (xiaohongshu), Q&A 
 
 **Not covered (API-only):** Sites like xueqiu (雪球) whose adapters use `page.evaluate(fetch(...))` exclusively — no DOM selectors exist to monitor.
 
+Any [OpenCLI](https://github.com/jackwener/OpenCLI) adapter that touches the DOM can be onboarded via the [Universal Onboarding Protocol](https://github.com/notes4mark/opencli-dom-heal) in ~30 minutes.
+
 ---
 
 ## Quick Start
